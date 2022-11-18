@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+        <title>Jugar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/jugar.css"/> 
+        <script type="module" src="javascript/jugar.js"></script>   
+    </head>
+    <body>
+        <a href="estudianteInicio.html" class="button" id="estudiante">Estudiante</button>
+        <a class="button" id="profesor">Profesor</button>
+        <a href="menuPrincipal.html"><img src="css/imagenes/casa.png" id="casa"/></a>
+        
+        <img src="css/imagenes/interrogacion.png" id="interrogacion"/>
+        <div id="modalInterrogacion" class="cuadro">
+            <div class="titulo">Elige la opción correspondiente dependiendo si eres un profesor o un alumno</div> 
+            <button id="cerrarInterrogacion">Cerrar</button>                
+        </div>
+
+        <div id="contrasenaProfesor" class="cuadro">
+            <p id="textoContra">Introduce la contraseña del profesor para continuar.</p>
+            <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required/>
+            <button id="enviar">Enviar</button>
+            <button id="cancelar">Cancelar</button>
+        </div>
+
+        <div id="error" class="cuadro">
+            <p id="contraE">Contraseña erronea, introduzca la correcta.</p>
+            <button id="aceptar">Aceptar</button>
+        </div>
+    </body>
+</html>

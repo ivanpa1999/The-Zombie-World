@@ -1,0 +1,136 @@
+/* FONDOS */
+
+body#laboratorio{
+    background-image: url("../../css/imagenes/laboratorio.png");
+}
+
+body#ayuntamiento{
+    background-image: url("../../css/imagenes/ayuntamiento.png");
+}
+
+body#hospital{
+    background-image: url("../../css/imagenes/hospital.png");
+}
+
+body#estacion{
+    background-image: url("../../css/imagenes/estacion.png");
+}
+
+body#museo{
+    background-image: url("../../css/imagenes/museo.png");
+}
+
+body#restaurante{
+    background-image: url("../../css/imagenes/restaurante.png");
+}
+
+body#supermercado{
+    background-image: url("../../css/imagenes/supermercado.png");
+}
+
+body#salaMusica{
+    background-image: url("../../css/imagenes/sala\ de\ musica.png");
+}
+
+body#gym{
+    background-image: url("../../css/imagenes/gym.png");
+}
+
+body#pisoFranco{
+    background-image: url("../../css/imagenes/piso\ franco.png");
+}
+
+/* PRIMERA PARTE */
+
+#primero{
+    visibility: visible;
+}
+
+#abre{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+}
+
+#cuadrado{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+}
+
+/* SEGUNDA PARTE */
+
+#segundo{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#tiempo{
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    color: rgb(116, 116, 10);
+    font-size: 30px;
+}
+
+#pregunta{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.respuestaCuadro{
+    background-color: rgb(133, 164, 207);
+    position: relative;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 57px;
+    float: left;
+    width: 25%;
+    border: solid 1px blue;
+    text-align: center;
+    height: 7.5%;
+}
+
+/* IMAGENES */
+
+#reloj{
+    position: relative;
+    top: 2.5%;
+    left: 5%;
+    height: 100px;
+    width: 100px;
+    transform: skewY(-20deg);
+}
+
+#ojo{
+    position: absolute;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    left: 45%;
+    top: 55%;
+}

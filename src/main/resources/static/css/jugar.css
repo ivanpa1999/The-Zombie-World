@@ -1,0 +1,124 @@
+body{
+    background-image: url("imagenes/fondo.png");
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+  
+.button:hover {background-color: #3e8e41}
+  
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#estudiante{
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    font-size: 50px;
+    width: 300px;
+}
+
+#profesor{
+    position: absolute;
+    left: 40%;
+    top: 58%;
+    font-size: 50px;
+    width: 300px;
+}
+
+#casa{
+    max-width: 60px;
+    position: absolute;
+    left: 95%;
+    top: 4%;
+}
+
+#interrogacion{
+    max-width: 60px;
+    position: absolute;
+    left: 90%;
+    top: 4%;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.cuadro{
+    position: absolute;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    visibility: hidden;
+    text-align: center;
+}
+
+#modalInterrogacion{
+    position: absolute;
+    width: 200px;
+    height: 110px;
+    top: 45%;
+    left: 45%;
+}
+
+#cerrarInterrogacion{
+    position: absolute;
+    top: 72%;
+    left: 70%;
+}
+
+#contrasenaProfesor{
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    font-size: 20px;
+    width: 300px;
+}
+
+#textoContra{
+    margin: 30px;
+    margin-bottom: 10px;
+}
+
+#contrasena{
+    top: 80%;
+    margin-bottom: 10px;
+}
+
+#cancelar{
+    position: relative;
+    margin-bottom: 10px;
+    left: 31.5%;
+}
+
+#enviar{
+    position: relative;
+    width: 70px;
+    left: 2%;
+}
+
+#error{
+    visibility: hidden;
+    top: 48%;
+    left: 48%;
+    width: 200px;
+    font-size: 20px;
+}
+
+#aceptar{
+    margin-bottom: 10px;
+}

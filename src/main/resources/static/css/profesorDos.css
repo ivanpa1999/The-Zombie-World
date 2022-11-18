@@ -1,0 +1,125 @@
+body{
+    background-image: url("imagenes/fondo.png");
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+  
+.button:hover {background-color: #3e8e41}
+  
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#usuarios{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    font-size: 40px;
+    width: 350px;
+    height: 50px;
+}
+
+#casa{
+    max-width: 60px;
+    position: absolute;
+    left: 95%;
+    top: 4%;
+}
+
+#interrogacion{
+    max-width: 60px;
+    position: absolute;
+    left: 90%;
+    top: 4%;
+}
+
+#reiniciar{
+    position: absolute;
+    left: 40%;
+    top: 58%;
+    font-size: 40px;
+    width: 350px;
+    height: 50px;
+}
+
+#play{
+    max-width: 70px;
+    position: absolute;
+    left: 92.5%;
+    top: 85%;
+}
+
+#modalInterrogacion{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    height: 200px;
+    width: 400px;
+}
+
+.cuadro{
+    position: absolute;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    visibility: hidden;
+    text-align: center;
+}
+
+#aceptar{
+    position: relative;
+    left: 80%;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+#preguntaReinicio{
+    position: absolute;
+    top: 44%;
+    left: 45%;
+    height: 100px;
+}
+
+#confirmacionReincio{
+    position: absolute;
+    top: 44%;
+    left: 42%;
+    width: 250px;
+    height: 170px;
+    font-size: 30px;
+}
+
+#aceptar{
+    position: absolute;
+    left: 65%;
+}
+
+#si{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 70px;
+}
+
+#no{
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    width: 70px;
+}

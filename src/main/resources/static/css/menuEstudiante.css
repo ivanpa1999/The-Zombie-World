@@ -1,0 +1,122 @@
+body{
+    background-image: url("imagenes/fondo.png");
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+  
+.button:hover {background-color: #3e8e41}
+  
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* CASA, INTERROGACION, VOLVER */
+
+#casa{
+    max-width: 60px;
+    position: absolute;
+    left: 95%;
+    top: 4%;
+}
+
+#interrogacion{
+    max-width: 60px;
+    position: absolute;
+    left: 90%;
+    top: 4%;
+}
+
+/* BOTONES */
+
+#perfil{
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    font-size: 40px;
+    width: 300px;
+}
+
+#jugar{
+    position: absolute;
+    left: 40%;
+    top: 58%;
+    font-size: 40px;
+    width: 300px;
+}
+
+/* VENTANA EMERGENTE */
+
+#ventana{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 20px;
+    width: 300px;
+    margin:10px;
+    background-color: #000000;
+    border: solid 1px blue;
+    color: white;
+    margin-left: 25%;
+    margin-top: 10%;
+    visibility: hidden;
+}
+
+#ventanaNuevoUsuario{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 20px;
+    width: 300px;
+    margin:10px;
+    background-color: #000000;
+    border: solid 1px blue;
+    color: white;
+    margin-left: 25%;
+    margin-top: 10%;
+    visibility: hidden;
+}
+
+#ventanaUsuario{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 20px;
+    width: 300px;
+    margin:10px;
+    background-color: #000000;
+    border: solid 1px blue;
+    color: white;
+    margin-left: 25%;
+    margin-top: 10%;
+    visibility: hidden;
+}
+
+#ventanaEditarUsuario{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 20px;
+    width: 300px;
+    margin:10px;
+    background-color: #000000;
+    border: solid 1px blue;
+    color: white;
+    margin-left: 25%;
+    margin-top: 10%;
+    visibility: hidden;
+}

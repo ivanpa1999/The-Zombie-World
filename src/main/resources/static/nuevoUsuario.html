@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>       
+        <title>Nuevo Usuario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/nuevoUsuario.css"/>
+        <script type="module" src="javascript/nuevoUsuario.js"></script>    
+    </head>
+    <body>
+        
+        <a href="estudianteInicio.html"><img src="css/imagenes/volver.jpg" id="volver"/></a>
+
+        <div id="ventana">
+            <form id="nuevo" method="get">
+                <label id="nombre" for="nameT">Nombre y apellidos</label><br><br>
+                <input type="text" id="nameT" name="nameT"><br><br>
+                <label id="correo" for="mail">Correo</label><br><br>
+                <input type="text" id="mail" name="mail">
+                <input type="hidden" name="comprobador" value="true">
+            </form>
+            <button id="boton">Crear</button>
+        </div>
+
+        <div id="usuarioCreado">
+            <p>El usuario ha sido creado correctamente.</p>
+            <button id="aceptar">Aceptar</button>
+        </div>
+
+        <div id="ventanaError">
+            <p>Los datos introducidos no son válidos.</p>
+            <button id="aceptarError">Aceptar</button>
+        </div>
+
+        <div id="ventanaError2">
+            <p>El correo utilizado ya está en uso.</p>
+            <button id="aceptarError2">Aceptar</button>
+        </div>
+
+    </body>
+</html>

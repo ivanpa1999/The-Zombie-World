@@ -1,0 +1,10 @@
+body{
+    background-image: url("imagenes/tablero.png");
+}
+
+#casa{
+    max-width: 60px;
+    position: absolute;
+    left: 95%;
+    top: 90%;
+}

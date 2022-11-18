@@ -1,0 +1,88 @@
+body{
+    background-image: url("imagenes/fondo.png");
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+  
+.button:hover {background-color: #3e8e41}
+  
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* VENTANA EMERGENTE */
+
+#modalInterrogacion{
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    padding: 20px;
+    width: 300px;
+}
+
+#cerrarInterrogacion{
+    position: absolute;
+    top: 75%;
+    left: 75%;
+}
+
+/* CASA E INTERROGACION */
+
+#casa{
+    max-width: 60px;
+    position: absolute;
+    left: 95%;
+    top: 4%;
+}
+
+#interrogacion{
+    max-width: 60px;
+    position: absolute;
+    left: 90%;
+    top: 4%;
+}
+
+/* BOTONES */
+
+#inicio{
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    font-size: 40px;
+    width: 300px;
+}
+
+#nuevo{
+    position: absolute;
+    left: 40%;
+    top: 58%;
+    font-size: 40px;
+    width: 300px;
+}
+
+.cuadro{
+    position: absolute;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    visibility: hidden;
+    text-align: center;
+}
+
+.cursor{
+    cursor: pointer;
+}

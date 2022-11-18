@@ -1,0 +1,60 @@
+body{
+    background-image: url("imagenes/fondo.png");
+}
+
+#cabecera{
+    background-color: white;
+    position: relative;
+    left: 500px;
+    max-width: 600px;
+    top: 66px;
+}
+
+#nombreC{
+    background-color: red;
+    position: absolute;
+    width: 345px;
+    left: 48%;
+    top: 66px;
+}
+
+#correoC{
+    position: relative;
+    background-color: red;
+    left: 0%;
+}
+
+#task-container{
+    background-color: white;
+    position: relative;
+    left: 500px;
+    max-width: 600px;
+    top: 50px;
+}
+
+.btn-delete{
+    position: relative;
+    left: 20px;
+}
+
+.estudiante{
+    border: black 1px solid;
+}
+
+p{
+    background-color: bisque;
+}
+
+#casa{
+    max-width: 60px;
+    position: absolute;
+    left: 95%;
+    top: 2.1%;
+}
+
+#volver{
+    max-width: 75px;
+    position: absolute;
+    left: 88.8%;
+    top: 2.1%;
+}

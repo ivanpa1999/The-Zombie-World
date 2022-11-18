@@ -1,0 +1,87 @@
+body{
+    background-image: url("imagenes/fondo.png");
+}
+
+/* TABLA DE INTRODUCCION DE LOS DATOS */
+
+#editarUsuario{
+    position: absolute;
+    padding:200px;
+    top: 8%;
+    width: 300px;
+    margin:10px;
+    background-color: #000000;
+    border: solid 1px blue;
+    color: white;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+#nombreU{
+    position: absolute;
+    top: 35%;
+    left: 17%;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+#correoU{
+    position: absolute;
+    top: 60%;
+    left: 17%;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+#tablaEN{
+    position: absolute;
+    left: 50%;
+    top: 35.5%;
+    font-size: 22px;
+    max-width: 350px;
+    max-height: 20px;
+}
+
+#tablaEC{
+    position: absolute;
+    left: 50%;
+    top: 60.5%;
+    font-size: 22px;
+    max-width: 350px;
+    max-height: 20px;
+}
+
+#botonEditar{
+    position: absolute;
+    top: 78%;
+    left: 77.5%;
+    text-decoration:dashed;
+}
+
+/* VOLVER */
+
+#volverEditarPerfil{
+    max-width: 75px;
+    position: absolute;
+    left: 150%;
+    top: -50%;
+}
+
+/* VENTANA EMERGENTE */
+
+#cuadroConfirmacionEditar{
+    background-color: #000000;
+    visibility: hidden;
+    border: solid 1px blue;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    padding: 20px;
+}
+
+.cursor{
+    cursor: pointer;
+}

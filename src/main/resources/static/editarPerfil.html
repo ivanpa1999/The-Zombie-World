@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>       
+        <title>Editar Perfil</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/editarPerfil.css"/>
+        <script type="module" src="javascript/editarPerfil.js"></script>    
+    </head>
+    <body>
+
+        <div id="editarUsuario">    
+            <b id="nombreU">Nombre y apellidos</b>
+            <b id="correoU">Correo electrónico</b>  
+            <input type="text" name="Nombre" id="tablaEN" placeholder="Nombre y apellidos" required/> 
+            <input type="text" name="Correo" id="tablaEC" placeholder="Correo" required>
+            <a id="botonEditar"><input type="button" value="Editar datos"></a>
+            <a><img src="css/imagenes/volver.jpg" id="volverEditarPerfil" class="cursor"/></a>
+        </div>
+
+        <div id="cuadroConfirmacionEditar"> 
+            <p>Has cambiado los datos correctamente</p>
+            <button id="aceptar">Aceptar</button>
+        </div>
+        
+    </body>
+</html>

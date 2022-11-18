@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>       
+        <title>Iniciar Sesion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/nuevoUsuario.css"/>
+        <script type="module" src="javascript/estudianteSesion.js"></script>    
+    </head>
+    <body>
+        
+        <a href="estudianteInicio.html"><img src="css/imagenes/volver.jpg" id="volver"/></a>
+
+        <div id="ventana">
+            <form id="nuevo" action="menuEstudiante.html" method="get">
+                <label id="nombre" for="nameT">Nombre y apellidos</label><br><br>
+                <input type="text" id="nameT" name="nameT"><br><br>
+                <label id="correo" for="mail">Correo</label><br><br>
+                <input type="text" id="mail" name="mail">
+                <input type="hidden" name="comprobador" value="false">
+            </form>
+            <button id="boton2">Iniciar Sesion</button>
+        </div>
+
+        <div id="ventanaError3">
+            <p>Los datos introducidos no se corresponden a un usuario registrado.</p>
+            <a href = "estudianteSesion.html"><button  id="aceptarError3">Aceptar</button>
+        </div>
+
+        <div id="usuarioCreado">
+            <p>El usuario ha sido creado correctamente.</p>
+            <button id="aceptar">Aceptar</button>
+        </div>
+
+    </body>
+</html>

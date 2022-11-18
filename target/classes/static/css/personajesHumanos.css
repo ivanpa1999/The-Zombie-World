@@ -1,0 +1,90 @@
+body{
+    background-image: url("imagenes/fondoPersonajes.png");
+}
+
+#casa{
+    max-width: 85px;
+    position: absolute;
+    left: 95%;
+    top: 2.1%;
+}
+
+#volver{
+    max-width: 75px;
+    position: absolute;
+    left: 95%;
+    top: 15%;
+}
+
+#fred{
+    position: absolute;
+    max-width: 300px;
+    max-height: 300px;
+    left: 15%;
+    top: 20%;
+}
+
+#piloto{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    max-width: 300px;
+    max-width: 300px;
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+#emy{
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    max-width: 300px;
+    max-width: 300px;
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+p{
+    color: white;
+    position: absolute;
+}
+
+#uno{
+    top: 60%;
+    left: 14.5%;
+    font-size: 25px;
+}
+
+#dos{
+    top: 70%;
+    left: 15.5%;
+    max-width: 150px;
+}
+
+#tres{
+    top: 60%;
+    left: 47%;
+    font-size: 25px;
+}
+
+#cuatro{
+    top: 70%;
+    left: 47%;
+    max-width: 150px;
+}
+
+#cinco{
+    top: 60%;
+    left: 79%;
+    font-size: 25px;
+}
+
+#seis{
+    top: 70%;
+    left: 78%;
+    max-width: 150px;
+}

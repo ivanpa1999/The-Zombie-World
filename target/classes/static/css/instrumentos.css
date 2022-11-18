@@ -1,0 +1,164 @@
+body{
+    background-image: url("imagenes/pergamino.png");
+}
+
+h2{
+    color: black;
+}
+
+h3{
+    color: black;
+}
+
+p{
+    color: black;
+}
+
+#interrogacion{
+    max-width: 70px;
+    position: absolute;
+    left: 86%;
+    top: 5%;
+}
+
+#casa{
+    max-width: 85px;
+    position: absolute;
+    left: 92.5%;
+    top: 4%;
+}
+
+#movil{
+    max-width: 200px;
+    position: absolute;
+    left: 2%;
+    top: 2%;
+}
+
+#medalla{
+    max-width: 150px;
+    position: absolute;
+    left: 29%;
+    top: 3%;
+}
+
+#pegamento{
+    max-width: 300px;
+    position: absolute;
+    left: 80%;
+    top: 12%;
+}
+
+#botiquin{
+    max-width: 300px;
+    position: absolute;
+    left: 80%;
+    top: 60%;
+}
+
+#amplificador{
+    max-width: 300px;
+    position: absolute;
+    left: 2%;
+    top: 65%;
+}
+
+#monedas{
+    max-width: 300px;
+    position: absolute;
+    left: 25%;
+    top: 73%;
+}
+
+#vitaminas{
+    max-width: 250px;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+}
+
+.cuadro{
+    position: absolute;
+    background-color: rgb(230, 214, 214);
+    visibility: visible;
+    text-align: center;
+}
+
+/* MOVIL */
+
+#textoMovil{
+    top: 30%;
+    left: 1%;
+    height: 160px;
+    width: 250px;
+}
+
+/* PREGUNTA */
+
+#modalInterrogacion{
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 45%;
+    left: 45%;
+}
+
+/* MEDALLA */
+
+#modalMedalla{
+    position: absolute;
+    width: 250px;
+    top: 45%;
+    left: 25%;
+    height: 200px;
+}
+
+/* VITAMINAS */
+
+#modalVitaminas{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 250px;
+    height: 150px;
+}
+
+/* PEGAMENTOS */
+
+#modalPegamento{
+    position: absolute;
+    top: 35%;
+    left: 67%;
+    width: 250px;
+    height: 130px;
+}
+
+/* AMPLIFICADOR */
+
+#modalAmplificador{
+    position: absolute;
+    top: 55%;
+    left: 1%;
+    width: 250px;
+    height: 110px;
+}
+
+/* MONEDAS */
+
+#modalMonedas{
+    position: absolute;
+    top: 73%;
+    left: 45%;
+    width: 250px;
+    height: 130px;
+}
+
+/* BOTIQUIN */
+
+#modalBotiquin{
+    position: absolute;
+    top: 65%;
+    left: 63%;
+    width: 250px;
+    height: 150px;
+}

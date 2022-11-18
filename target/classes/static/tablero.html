@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+        <title>Tablero</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/tablero.css"/>   
+        <script type="module" src="javascript/tablero.js"></script> 
+    </head>
+    <body>
+        <script src="javascript/jquery-3.6.1.min.js"></script>
+
+        <!--FONDO QUE SIEMPRE ESTA-->
+
+        <div id="rectanguloMarron">
+            <p id="tiraDado">TIRA EL DADO PARA EMPEZAR TU PARTIDA</p>
+            <a><img src="css/imagenes/flecha.png" id="flecha"></a>
+
+            <a><img src="css/imagenes/dado1.png" id="dado1" class="dado"></a>
+            <a><img src="css/imagenes/dado2.png" id="dado2" class="dado"></a>
+            <a><img src="css/imagenes/dado3.png" id="dado3" class="dado"></a>
+            <a><img src="css/imagenes/dado4.png" id="dado4" class="dado"></a>
+            <a><img src="css/imagenes/dado5.png" id="dado5" class="dado"></a>
+            <a><img src="css/imagenes/dado6.png" id="dado6" class="dado"></a>
+
+
+            <a><img src="css/imagenes/dado1.png" id="dado1E" class="dado"></a>
+            <a><img src="css/imagenes/dado2.png" id="dado2E" class="dado"></a>
+            <a><img src="css/imagenes/dado3.png" id="dado3E" class="dado"></a>
+            <a><img src="css/imagenes/dado4.png" id="dado4E" class="dado"></a>
+            <a><img src="css/imagenes/dado5.png" id="dado5E" class="dado"></a>
+            <a><img src="css/imagenes/dado6.png" id="dado6E" class="dado"></a>
+
+            <hr id="raya1" class="raya">
+            <hr id="raya2" class="raya">
+
+
+        <!--PERFIL DEL USUARIO EN CASO DE QUE NO SEA EL PROFESOR-->
+            <div id="perfilJugador">
+                <p id="perfilTexto">PERFIL</p>
+                <div id="task-perfil"></div>
+            </div>
+
+            <!--TOP 3 JUGADORES CON MAS PUNTOS-->
+            <div id="top3">
+                <p id="rankingTexto">RANKING</p>
+                <div id="task-top"></div>
+            </div>
+            
+        </div>
+
+        <div id="tableroCentral">
+            <a><img src="css/imagenes/fondoTablero.jpg" id="imagenCentral"></a>
+        </div>
+
+        <div id="derechaNegra">
+            <a href="menuPrincipal.html"><img src="css/imagenes/casa.png" id="casa"/></a>
+            <a><img src="css/imagenes/bolsa.png" id="botonObjetos" class="cursor2"></a>
+            <a><img src="css/imagenes/logoVerJugadores.png" id="botonJugadores" class="cursor2"></a>
+            <a><img src="css/imagenes/chat.png" id="botonChat" class="cursor2"></a>
+            <a><img src="css/imagenes/interrogacion.png" id="interrogacion"></a>
+        </div>
+
+        <!--TABLERO EN SI-->
+
+        <div id="tableroHexagonos">
+            <a><img src="css/imagenes/ayuntamiento.png" id="hAyuntamiento" class="hexagono"></a>
+            <a><img src="css/imagenes/ayuntamiento2.png" id="hAyuntamiento2" class="hexagono"></a>
+            <a><img src="css/imagenes/tren.png" id="hEstacion" class="hexagono"></a>
+            <a><img src="css/imagenes/tren2.png" id="hEstacion2" class="hexagono"></a>
+            <a><img src="css/imagenes/gym.png" id="hGym" class="hexagono"></a>
+            <a><img src="css/imagenes/gym2.png" id="hGym2" class="hexagono"></a>
+            <a><img src="css/imagenes/hospital.png" id="hHospital" class="hexagono"></a>
+            <a><img src="css/imagenes/hospital2.png" id="hHospital2" class="hexagono"></a>
+            <a><img src="css/imagenes/laboratorio.png" id="hLaboratorio" class="hexagono"></a>
+            <a><img src="css/imagenes/laboratorio2.png" id="hLaboratorio2" class="hexagono"></a>
+            <a><img src="css/imagenes/cuadro.png" id="hMuseo" class="hexagono"></a>
+            <a><img src="css/imagenes/cuadro2.png" id="hMuseo2" class="hexagono"></a>
+            <a><img src="css/imagenes/piso.png" id="hPisoFranco" class="hexagono"></a>
+            <a><img src="css/imagenes/piso2.png" id="hPisoFranco2" class="hexagono"></a>
+            <a><img src="css/imagenes/restaurante.png" id="hRestaurante" class="hexagono"></a>
+            <a><img src="css/imagenes/restaurante2.png" id="hRestaurante2" class="hexagono"></a>
+            <a><img src="css/imagenes/salaDeMusica.png" id="hSalaMusica" class="hexagono"></a>
+            <a><img src="css/imagenes/salaDeMusica2.png" id="hSalaMusica2" class="hexagono"></a>
+            <a><img src="css/imagenes/supermercado.png" id="hSupermercado" class="hexagono"></a>
+            <a><img src="css/imagenes/supermercado2.png" id="hSupermercado2" class="hexagono"></a>
+
+            <!-- HAY 96 HEXAGONOS MARRONES-->
+
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h1" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h2" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h3" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h4" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h5" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h6" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h7" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h8" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h9" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h10" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h11" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h12" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h13" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h14" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h15" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h16" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h17" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h18" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h19" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h20" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h21" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h22" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h23" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h24" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h25" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h26" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h27" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h28" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h29" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h30" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h31" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h32" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h33" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h34" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h35" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h36" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h37" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h38" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h39" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h40" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h41" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h42" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h43" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h44" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h45" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h46" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h47" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h48" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h49" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h50" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h51" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h52" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h53" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h54" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h55" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h56" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h57" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h58" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h59" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h60" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h61" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h62" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h63" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h64" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h65" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h66" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h67" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h68" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h69" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h70" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h71" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h72" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h73" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h74" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h75" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h76" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h77" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h78" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h79" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h80" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h81" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h82" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h83" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h84" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h85" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h86" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h87" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h88" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h89" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h90" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h91" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h92" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h93" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h94" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h95" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h96" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h97" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h98" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h99" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h100" class="hexagonoPeq"></a>
+
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h101" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h102" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h103" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoAzul.png" id="h104" class="hexagonoPeq"></a>
+            <a><img src="css/imagenes/hexagonoNegro.png" id="h115" class="hexagonoPeq"></a>
+
+            <!--HEXAGONOS NEGROS-->
+            
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn1" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn2" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn3" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn4" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn5" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn6" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn7" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn8" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn9" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn10" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn11" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn12" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn13" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn14" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn15" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn16" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn17" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn18" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn19" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn20" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn21" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn22" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn23" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn24" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn25" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn26" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn27" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn28" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn29" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn30" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn31" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn32" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn33" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn34" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn35" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn36" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn37" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn38" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn39" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn40" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn41" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn42" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn43" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn44" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn45" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn46" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn47" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn48" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn49" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn50" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn51" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn52" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn53" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn54" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn55" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn56" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn57" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn58" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn59" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn60" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn61" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn62" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn63" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn64" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn65" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn66" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn67" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn68" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn69" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn70" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn71" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn72" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn73" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn74" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn75" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn76" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn77" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn78" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn79" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn80" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn81" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn82" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn83" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn84" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn85" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn86" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn87" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn88" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn89" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn90" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn91" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn92" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn93" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn94" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn95" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn96" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn97" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn98" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn99" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn100" class="hexagonoNegro"></a>
+
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn101" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn102" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn103" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn104" class="hexagonoNegro"></a>
+            <a><img src="css/imagenes/hexagonoEleccion.png" id="hn115" class="hexagonoNegro"></a>
+
+            <!-- PUNTO PARA REPRESENTAR DONDE ESTÁN LOS OBJETOS EN EL TABLERO-->
+            <a><img src="css/imagenes/objeto.png" id="o1" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o2" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o3" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o4" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o5" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o6" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o7" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o8" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o9" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o10" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o10" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o11" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o12" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o13" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o14" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o15" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o16" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o17" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o18" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o19" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o20" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o21" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o22" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o23" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o24" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o25" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o26" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o27" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o28" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o29" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o30" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o31" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o32" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o33" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o34" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o35" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o36" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o37" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o38" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o39" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o40" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o41" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o42" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o43" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o44" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o45" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o46" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o47" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o48" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o49" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o50" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o51" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o52" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o53" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o54" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o55" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o56" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o57" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o58" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o59" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o60" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o61" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o62" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o63" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o64" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o65" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o66" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o67" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o68" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o69" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o70" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o71" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o72" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o73" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o74" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o75" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o76" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o77" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o78" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o79" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o80" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o81" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o82" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o83" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o84" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o85" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o86" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o87" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o88" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o89" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o90" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o91" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o92" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o93" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o94" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o95" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o96" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o97" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o98" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o99" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o100" class="marcaObjeto"></a>
+
+            <a><img src="css/imagenes/objeto.png" id="o101" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o102" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o103" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o104" class="marcaObjeto"></a>
+            <a><img src="css/imagenes/objeto.png" id="o115" class="marcaObjeto"></a>
+
+        </div>
+
+        <!--FICHAS DE LOS JUGADORES-->
+
+        <a><img src="css/imagenes/h.png" id="fichaHumano" class="ficha"></a>
+        <a><img src="css/imagenes/z.png" id="fichaZombie" class="ficha"></a>
+
+        <!--CUANDO PULSAS OBJETOS-->
+
+        <div id="pantallaObjetos">
+            <a><img src="css/imagenes/bolsa.png" id="bolsaH" class="bolsa"></a>
+
+            <a><button id="aceptarObjetos">Aceptar</button></a>
+
+            <img src="css/imagenes/movil.png" id="movilH" class="movil"/>
+            <img src="css/imagenes/medalla.png" id="medallaH" class="medalla"/>
+            <img src="css/imagenes/vitaminas.png" id="vitaminasH" class="vitaminas"/>
+            <img src="css/imagenes/pegamento.png" id="pegamentoH" class="pegamento"/>
+            <img src="css/imagenes/amplificador.png" id="amplificadorH" class="amplificador"/>
+            <img src="css/imagenes/monedas.png" id="monedasH" class="monedas"/>
+            <img src="css/imagenes/botiquin.png" id="botiquinH" class="botiquin"/>
+
+            <img src="css/imagenes/movil.png" id="movilZ" class="movil"/>
+            <img src="css/imagenes/medalla.png" id="medallaZ" class="medalla"/>
+            <img src="css/imagenes/vitaminas.png" id="vitaminasZ" class="vitaminas"/>
+            <img src="css/imagenes/pegamento.png" id="pegamentoZ" class="pegamento"/>
+            <img src="css/imagenes/amplificador.png" id="amplificadorZ" class="amplificador"/>
+            <img src="css/imagenes/monedas.png" id="monedasZ" class="monedas"/>
+            <img src="css/imagenes/botiquin.png" id="botiquinZ" class="botiquin"/>
+        </div>
+
+        <!--CUANDO PULSAS LA INTERROGACION-->
+
+        <div id="pantallaInterrogacion">
+            <p id="titulo">INFORMACION</p><br>
+            <p class="texto">- Para mover la ficha, pulsa el dado cuando este rodando y selecciona la casilla a donde quieres desplazarte<br> (las posibles casillas a las que desplazarte estarán marcadas).</p>
+            <p class="texto">- Las casillas que tienen una bolsa de objetos en su interior marcan que dará un objeto al equipo que llega a la posición.</p>
+            <p class="texto">- Las funciones de los iconos de la derecha son: 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; - Bolsa: sirve para ver los objetos y sus usos.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; - Jugadores con lupa: te permite ver los jugadores de los equipos con los puntos.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; - Chat: abre el chat del equipo.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp; - Zombies y humano: muestra los diferentes personajes especiales con sus habilidades.</p>
+            <a><button id="aceptarInterrogacion">Aceptar</button></a>
+        </div>
+
+        <!--CUANDO TIENES QUE PULSAR UNA CASILLA PARA MOVER UNA FICHA-->
+
+        <div id="pantallaMoverFicha">
+            <p id="textoFicha">SELECCIONA UNA DE LAS CASILLAS COLOREADAS EN NEGRO PARA MOVER LA FICHA</p><br>
+        </div>
+
+        <!--CUANDO PULSAS UN PERSONAJE-->
+        <div id="pantallaPersonajes">
+            <p id="personaje1Texto" class="textoPersonajes"><u>Ventajas:</u> Puede quitar puntos 2 veces a dos personas diferentes, sin necesidad de preguntar.</p>
+            <p id="personaje2Texto" class="textoPersonajes"><u>Ventajas:</u> Esta investigadora podrá quitar instrumentos especiales del otro grupo. Solo podrá hacerlo si su grupo acierta la pregunta.</p>
+            <p id="personaje3Texto" class="textoPersonajes"><u>Ventajas:</u> Cuando acierta pregunta, roba 100 puntos extra al jugador que quiera de la Resistencia.</p>
+            <p id="personaje4Texto" class="textoPersonajes"><u>Ventajas:</u> Si acierta correctamente sin ayuda vuelve a tirar el dado.</p>
+            <p id="personaje5Texto" class="textoPersonajes"><u>Ventajas:</u> Puede desarrollar un escudo protector. El escudo permite no perder puntos ante una pregunta fallada.</p>
+            <p id="personaje6Texto" class="textoPersonajes"><u>Ventajas:</u> Restringe el movimiento al equipo contrario cuando fallan una pregunta durante el siguiente turno. </p>
+            <a><button id="aceptarPersonajes">Aceptar</button></a>
+        </div>
+
+        <!--CUANDO PULSAS EN UN OBJETO-->
+        <div id="pantallaObjetos">
+            <p id="objeto1Texto" class="textoObjetos"> Permite que puedas hablar con los compañeros mientras respondes a una pregunta.</p>
+            <p id="objeto2Texto" class="textoObjetos"> Si se acierta la pregunta, cada miembro del equipo sumará 50 puntos. En el caso de fallar la pregunta, cada miembro restará 50 puntos.</p>
+            <p id="objeto3Texto" class="textoObjetos"> Las vitaminas hacen inmune al poseedor. Estará activo durante 2 turnos, en el que no se restarán puntos si se falla la pregunta.</p>
+            <p id="objeto4Texto" class="textoObjetos"> Si te haces con el pegamento, el siguiente turno el equipo contrario no mueve ficha.</p>
+            <p id="objeto5Texto" class="textoObjetos"> Quita 100 puntos a un jugador del equipo contrario a la eleccion.</p>
+            <p id="objeto6Texto" class="textoObjetos"> Permite donar 100 puntos a un jugador de tu equipo. </p>
+            <p id="objeto7Texto" class="textoObjetos"> El jugador obtiene o 200 puntos o una vida extra. </p>    
+        </div>
+            <a><button id="aceptarObjetosTexto">Aceptar</button></a>
+
+        <!--CUANDO PULSAS EN JUGADORES-->
+        <div id="pantallaJugadores">
+            <p id="equipoHumano" class="tituloJugadores"><u>LA RESISTENCIA</u></p>
+            <p id="equipoZombie" class="tituloJugadores"><u>ZOMBIES</u></p>
+            <div id="task-humano"></div>
+            <div id="task-zombie"></div>
+            <a><button id="aceptarPersonas">Cerrar</button></a>
+        </div>
+
+        <!--VER LOS PERSONAJES-->
+        <a><img src="css/imagenes/personajes.png" id="personajesBoton" class="cursor2"/></a>
+        <div id="ventanaPersonajes">
+            <p id="personajes">PERSONAJES ESPECIALES</p>
+            <a><img src="css/imagenes/lix.png" id="personaje1" class="cursor1"></a>
+            <a><img src="css/imagenes/emy.png" id="personaje2" class="cursor1"></a>
+            <a><img src="css/imagenes/jow.png" id="personaje3" class="cursor1"></a>
+            <a><img src="css/imagenes/piloto.png" id="personaje4" class="cursor1"></a>
+            <a><img src="css/imagenes/delis.png" id="personaje5" class="cursor1"></a>                                  
+            <a><img src="css/imagenes/comisarioFred.png" id="personaje6" class="cursor1"></a>
+            <button id="cerrarPersonajes">Cerrar</button>
+        </div>
+
+        <!-- MENSAJE DE NUEVO TURNO -->
+        <div id="pantallaNuevoTurno">
+            <div id="task-turno"></div>
+        </div>
+        
+        <!--PLAY Y PAUSA PARA EL PROFESOR-->
+        <a><img src="css/imagenes/play.png" id="play"/></a>
+        <a><img src="css/imagenes/pausa.png" id="pausa"/></a>
+
+        <!-- PANTALLA PARA ELEGIR A QUE JUGADOR VAN LOS PERSONAJES ESPECIALES -->
+        <div id="pantallaSeleccionarPersonajes">
+            <div id="task-seleccionerPersonajes"></div>
+        </div>
+
+
+        <!--PREGUNTAS INDIVIDUALES-->
+        <div id="fondoPregunta50" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="preguntasPeq">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” realiza las acciones necesarias para que tenga un encabezado con el nombre de la hoja centrado y un pie de página a la derecha con el numero de hoja. ¿cuántas páginas se imprimen?</p>
+
+            <p class="respuestaCuadro4">A. 1</p>
+            <p class="respuestaCuadro4">B. 7</p>
+            <p class="respuestaCuadro4">C. 3</p>
+            <p class="respuestaCuadro4">D. 9</p>
+            <p class="respuestaCuadro4">E. 5</p>
+            <p class="respuestaCuadro4">F. 11</p>
+        </div>
+        
+        <div id="fondoPregunta47" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” realiza las acciones necesarias para que se impriman siempre los encabezados y la primera columna. ¿qué nombre se imprime el primero en la hoja 3? </p>
+
+            <p class="respuestaCuadro4">A. Gissela</p>
+            <p class="respuestaCuadro4">B. Nelson</p>
+            <p class="respuestaCuadro4">C. Violeta</p>
+            <p class="respuestaCuadro4">D. Olga</p>
+            <p class="respuestaCuadro4">E. Angel</p>
+            <p class="respuestaCuadro4">F. Oscar</p>
+        </div>
+        
+        <div id="fondoPregunta44" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Base de datos”  realiza las acciones necesarias para que se impriman solo los datos de los abogados y de los analistas de riesgo. ¿cuántas páginas se imprimen ahora? </p>
+
+            <p class="respuestaCuadro4">A. 1</p>
+            <p class="respuestaCuadro4">B. 4</p>
+            <p class="respuestaCuadro4">C. 2</p>
+            <p class="respuestaCuadro4">D. 5</p>
+            <p class="respuestaCuadro4">E. 3</p>
+            <p class="respuestaCuadro4">F. 6</p>
+        </div>
+        
+        <div id="fondoPregunta39" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” realiza las acciones necesarias para que se imprima en 3 hojas en posición horizontal. ¿A qué escala se imprime ahora la hoja? </p>
+
+            <p class="respuestaCuadro4">A. 87%</p>
+            <p class="respuestaCuadro4">B. 73%</p>
+            <p class="respuestaCuadro4">C. 21%</p>
+            <p class="respuestaCuadro4">D. 68%</p>
+            <p class="respuestaCuadro4">E. 45%</p>
+            <p class="respuestaCuadro4">F. 98%</p>
+        </div>
+        
+        <div id="fondoPregunta37" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="preguntasPeq">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” crea un formato condicional en el campo DNI donde se muestren solo los que tienen letra C en color relleno azul y los DNI que tienen letra X en color relleno verde. ¿cuántos aparecen en verde?</p>
+
+            <p class="respuestaCuadro4">A. 7</p>
+            <p class="respuestaCuadro4">B. Ninguno</p>
+            <p class="respuestaCuadro4">C. 2</p>
+            <p class="respuestaCuadro4">D. 1</p>
+            <p class="respuestaCuadro4">E. 3</p>
+            <p class="respuestaCuadro4">F. 5</p>
+        </div>
+        
+        <div id="fondoPregunta35" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” Inserta las columnas que necesites para separar del campo fecha de nacimiento, el año, el mes y el día en 3 columnas distintas.</p>
+        </div>
+        
+        <div id="fondoPregunta34" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="preguntasPeq">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” realiza las acciones necesarias juntar en una única columna llamada "nombre y apellidos", el nombre y los dos apellidos de cada cliente a través de funciones. ¿que funcion/es utilizas?</p>
+
+            <p class="respuestaCuadro4">A. Hallar</p>
+            <p class="respuestaCuadro4">B. Concatenar</p>
+            <p class="respuestaCuadro4">C. Izquierda</p>
+            <p class="respuestaCuadro4">D. Aleatorio</p>
+            <p class="respuestaCuadro4">E. Derecha</p>
+            <p class="respuestaCuadro4">F. Extrae</p>
+        </div>
+        
+        <div id="fondoPregunta33" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” realiza las acciones necesarias para que através de una función aparezca en una columna aparte, el año de nacimiento de cada uno de los clientes</p>
+        </div>
+        
+        <div id="fondoPregunta32" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” ordena los datos primero por función en ordena ascendente y luego por la persona más joven. ¿qué nombre tiene el primer registro?</p>
+
+            <p class="respuestaCuadro4">A. Isabel</p>
+            <p class="respuestaCuadro4">B. Antonio</p>
+            <p class="respuestaCuadro4">C. Enrique</p>
+            <p class="respuestaCuadro4">D. Milagros</p>
+            <p class="respuestaCuadro4">E. Carlos</p>
+            <p class="respuestaCuadro4">F. Guillermo</p>
+        </div>
+        
+        <div id="fondoPregunta31" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Base de datos” ordena los datos primero por apellido 1 en orden ascendente, después por apellidos dos en orden descendente.¿Qué nombre aparece en la fila 37?</p>
+
+            <p class="respuestaCuadro4">A. Esther</p>
+            <p class="respuestaCuadro4">B. Olga</p>
+            <p class="respuestaCuadro4">C. Enrique</p>
+            <p class="respuestaCuadro4">D. Gloria</p>
+            <p class="respuestaCuadro4">E. Carlos</p>
+            <p class="respuestaCuadro4">F. Roberto</p>
+        </div>
+        
+        <div id="fondoPregunta30" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” crea una tabla dinámica donde se muestre por rango de antiguedad de 5 en 5, siendo el mínimo 1, la media en dietas. ¿cuál es el rengo con mayor media? </p>
+
+            <p class="respuestaCuadro4">A. 21-25</p>
+            <p class="respuestaCuadro4">B. 11-15</p>
+            <p class="respuestaCuadro4">C. 1-5</p>
+            <p class="respuestaCuadro4">D. 36-30</p>
+            <p class="respuestaCuadro4">E. 6-10</p>
+            <p class="respuestaCuadro4">F. 16-20</p>
+        </div>
+        
+        <div id="fondoPregunta29" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, inserta una nueva columna al principio de los datos de la hoja “Base de datos” y a partir de la fila 3 crea una serie de relleno línea con un incremento de 0,60. ¿Qué valor aparece en la celda A51?</p>
+
+            <p class="respuestaCuadro4">A. 58,8</p>
+            <p class="respuestaCuadro4">B. 50,1s</p>
+            <p class="respuestaCuadro4">C. 40,20</p>
+            <p class="respuestaCuadro4" id="mover">D. 36 </p>
+            <p class="respuestaCuadro4" id="mover">E. 102,8  </p>
+        </div>
+        
+        <div id="fondoPregunta28" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” crea un formato condicional en el campo "Salario anual" donde se muestren en escala de color de dos colores la mínima de 25000 en verde, la máxima de 90000 en amarilla. ¿de qué color se muestra la celda G7?</p>
+
+            <p class="respuestaCuadro4">A. VERDE</p>
+            <p class="respuestaCuadro4">B. AMARILLA</p>
+            <p class="respuestaCuadro4">C. BLANCA</p>
+        </div>
+        
+        <div id="fondoPregunta27" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="preguntasPeq">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “Borrador” crea un formato condicional en el campo DNI donde se muestren solo los que tienen letra C en color relleno azul y los DNI que tienen letra X en color relleno verde. ¿cuántos aparecen en verde?</p>
+
+            <p class="respuestaCuadro4">A. 7</p>
+            <p class="respuestaCuadro4">B. Ninguno</p>
+            <p class="respuestaCuadro4">C. 2</p>
+            <p class="respuestaCuadro4">D. 1</p>
+            <p class="respuestaCuadro4">E. 3</p>
+            <p class="respuestaCuadro4">F. 5</p>
+        </div>
+        
+        <div id="fondoPregunta26" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, y la hoja “BASE DE DATOS” crea un formato condicional en el campo "Antigüedad" donde se muestren los 10 datos inferiores en color relleno azul. filtrando datos por color, ¿cuántos datos permanencen?</p>
+
+            <p class="respuestaCuadro4">A. 13</p>
+            <p class="respuestaCuadro4">B. 14</p>
+            <p class="respuestaCuadro4">C. 15</p>
+        </div>
+        
+        <div id="fondoPregunta25" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, crea una nueva lista personalizada con 5 provincias de España. Introduce la lista creada en una hoja nueva a partir de la celda A3. </p>
+        </div>
+        
+        <div id="fondoPregunta24" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Cuántos y de que tipo son los Hipervínculos que podemos hacer en Excel?</p>
+        </div>
+        
+        <div id="fondoPregunta23" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="preguntasPeq">Se ha realizado un cambio de sucursal de Valencia a Barcelona. Con la ayuda del archivo llamado “TZW1_PC”, realiza las acciones necesarias para que en la hoja "Base de datos" se muestren las sucursales de Barcelona en vez de las de Valencia. ¿Cuántos reemplazos se han realizado?</p>
+
+            <p class="respuestaCuadro4">A. 15</p>
+            <p class="respuestaCuadro4">B. 20</p>
+            <p class="respuestaCuadro4">C. 21</p>
+            <p class="respuestaCuadro4">D. 17</p>
+            <p class="respuestaCuadro4">E. 22</p>
+            <p class="respuestaCuadro4">F. 9</p>
+        </div>
+        
+        <div id="fondoPregunta22" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1 min</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, copia mediante transponer los DNI de la hoja “Datos_empleados_2” en una nueva hoja a partir de la ceda D5.  </p>
+        </div>
+        
+        <div id="fondoPregunta21" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, crea un aleatorio en la columna D de la hoja "San Sebastián". El aleatorio debe contener números entre el 50.000.000 millones y 35.000.000 millones. Después realiza las acciones necesarias para que los valores no cambien  </p>
+        </div>
+        
+        <div id="fondoPregunta20" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Qué diferencia existe entre ajustar texto y autoajuste de celdas?  </p>
+        </div>
+        
+        <div id="fondoPregunta19" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 45 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, en la hoja “borrador”, cambia la orientación del contenido de los encabezados de los datos a -46 grados.s  </p>
+        </div>
+        
+        <div id="fondoPregunta18" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 45 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, en la hoja “Sevilla”, comprueba si los ingresos han sido mayores que los gastos con resultados de valores lógicos.  </p>
+        </div>
+        
+        <div id="fondoPregunta17" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 45 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, copia los datos de la hoja “Base de datos” a un nuevo libro. Inmoviliza las dos primeras filas y las 4 primeras columnas de esa nueva hoja.
+                ¿En qué celda debes colocarte?</p>
+
+            <p class="respuestaCuadro4">A. ‘(Libro2)hoja3!$C$2</p>
+            <p class="respuestaCuadro4">B.  ‘[Libro2]hoja3!C2</p>
+            <p class="respuestaCuadro4">C. ‘(Libro2)hoja3$C2 </p>
+            <p class="respuestaCuadro4">D. ‘[Libro2]hoja3C2</p>
+            <p class="respuestaCuadro4">E. ‘Libro2hoja3!$C$2</p>
+            <p class="respuestaCuadro4">F.  ‘Libro2[hoja3![$C$2</p>
+        </div>
+        
+        <div id="fondoPregunta16" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1 min</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Qué diferencia existe entre rango de datos y referencia de celda?</p>
+        </div>
+        
+        <div id="fondoPregunta15" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿De qué 3 maneras podemos modificar el contenido de una celda de Excel?</p>
+
+            <p class="respuestaCuadro4">A) F2, triple clic y barra de estado</p>
+            <p class="respuestaCuadro4">B) Cuadro de nombre, f3 y barra de fórmulas</p>
+            <p class="respuestaCuadro4">C) Doble clic, F2 y cuadro de nombre</p>
+            <p class="respuestaCuadro4" id="mover">D) Barra de fórmulas, doble clic y  F2 </p>
+            <p class="respuestaCuadro4" id="mover">E) F3, barra de fórmulas y doble clic </p>
+        </div>
+        
+        <div id="fondoPregunta14" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1 min</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Cómo podemos realizar la unión del contenido de dos o más celdas?</p>
+        </div>
+        
+        <div id="fondoPregunta13" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1 min</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC” realiza las acciones necesarias para modificar el rango llamado “nuevo” de manera que llegue hasta la columna M.</p>
+        </div>
+        
+        <div id="fondoPregunta12" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, copia los datos de la hoja “Base de datos” a un nuevo libro. Inmoviliza las dos primeras filas y las 4 primeras columnas de esa nueva hoja.
+                ¿En qué celda debes colocarte?</p>
+
+            <p class="respuestaCuadro4">A. menos de 10</p>
+            <p class="respuestaCuadro4">B. entre 10 y 20</p>
+            <p class="respuestaCuadro4">C. entre 20 y 25</p>
+            <p class="respuestaCuadro4">D. entre 25 y 30</p>
+            <p class="respuestaCuadro4">E. entre 30 y 35</p>
+            <p class="respuestaCuadro4">F. más de 35</p>
+        </div>
+        
+        <div id="fondoPregunta11" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">A qué lado de la celda se colocan: <br>
+                -	Los números <br>
+                -	Las letras <br>
+                -	Las fórmulas <br>
+                -	Las funciones</p>
+        </div>
+        
+        <div id="fondoPregunta10" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Cómo podemos hacer que un libro de Excel tenga, al abrirse, más de 1 hoja?</p>
+
+            <p class="respuestaCuadro4">A. Dando al + para aumentar el Nº de hojas del libro a tantas hojas como yo quiera</p>
+            <p class="respuestaCuadro4">B. Desde el Backstage en la información del documento</p>
+            <p class="respuestaCuadro4">C. Desde la pestaña archivo en Abrir</p>
+            <p class="respuestaCuadro4" id="mover">D. Desde las opciones del Backstage </p>
+            <p class="respuestaCuadro4" id="mover">E. Desde la pestaña Disposición en el grupo de comandos abrir nuevo.</p>
+        </div>
+        
+        <div id="fondoPregunta9" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC” Inserta un formato tabla a los datos de la hoja “Borrador”. Cambia el nombre de la tabla por NAA.</p>
+        </div>
+        
+        <div id="fondoPregunta8" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1 min</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, copia los datos de la hoja “Base de datos” a un nuevo libro. Inmoviliza las dos primeras filas y las 4 primeras columnas de esa nueva hoja.
+                ¿En qué celda debes colocarte?</p>
+
+            <p class="respuestaCuadro4">A. E3</p>
+            <p class="respuestaCuadro4">B. B2</p>
+            <p class="respuestaCuadro4">C. E4</p>
+            <p class="respuestaCuadro4">D. E2</p>
+            <p class="respuestaCuadro4">E. D3</p>
+            <p class="respuestaCuadro4">F. D2</p>
+        </div>
+        
+        <div id="fondoPregunta7" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Recuerdas el Nº de filas aproximadas y de columnas que tiene una hoja de Excel?</p>
+
+            <p class="respuestaCuadro4">A. 19.000 columnas aproximadamente y las filas son infinitas</p>
+            <p class="respuestaCuadro4">B. 16.000 filas aproximadamente y 1 millón y medio de columnas</p>
+            <p class="respuestaCuadro4">C. Menos de 17.000 columnas y más de un millón de filas</p>
+            <p class="respuestaCuadro4">D.  Ambas son infinitas</p>
+            <p class="respuestaCuadro4">E. Unas 14.000 columnas y alrededor de 1 millón de filas</p>
+            <p class="respuestaCuadro4">F.  16.700 columnas y casi 2 millones de filas.</p>
+        </div>
+        
+        <div id="fondoPregunta6" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1'30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Cómo podemos eliminar un nombre de una tabla del administrador de nombres o del cuadro de nombres?</p>
+        </div>
+        
+        <div id="fondoPregunta5" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1' 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, realiza una búsqueda del siguiente DNI: 31641812-V. Realiza una captura de pantalla de los resultados y pégala en la hoja capturas ¿Cuántas veces aparece?</p>
+
+            <p class="respuestaCuadro4">A. 7</p>
+            <p class="respuestaCuadro4">B. 5</p>
+            <p class="respuestaCuadro4">C. 2</p>
+            <p class="respuestaCuadro4">D. 1</p>
+            <p class="respuestaCuadro4">E. 4</p>
+            <p class="respuestaCuadro4">F. 3</p>
+        </div>
+        
+        <div id="fondoPregunta4" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1' 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Con la ayuda del archivo llamado “TZW1_PC”, en la hoja "base de datos", inserta una nueva columna después del campo “Antigüedad” y copia los datos del rango “Complemento” a partir de la celda J2. ¿Qué dato aparece en la celda J7?</p>
+
+            <p class="respuestaCuadro4">A. Nada</p>
+            <p class="respuestaCuadro4">B. Madrid</p>
+            <p class="respuestaCuadro4">C. 1.142€</p>
+            <p class="respuestaCuadro4">D. Cajera</p>
+            <p class="respuestaCuadro4">E. Boza</p>
+            <p class="respuestaCuadro4">F. 25</p>
+        </div>
+        
+        <div id="fondoPregunta3" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Qué es el cuadro de nombre y que podemos hacer en él?¿Qué nombre reciben cada una de las siguientes partes del entorno de Excel?</p>
+            <a><img src="css/imagenes/ojo.png" id="ojo3"></a>
+        </div>
+        <a><img src="css/imagenes/excel.png" id="excel"></a>
+        
+        <div id="fondoPregunta2" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 1 min</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">Une los siguientes atajos del teclado a sus acciones correspondientes</p>
+            <div id="contenido">
+                <p id="izquierda">A) CTRL + ↓ <br> B) F2 <br>C) CTRL + V <br>D) CTRL + C <br>E) ALT <br> F) CTRL + SHIFT + ↓</p>
+                <p id="derecha">1. Acceso a Acceso a cinta de opciones, pestañas y comandos. <br>2. Cortar. <br> 3. Desplazarnos al final de las filas. <br> 4. Pegar. <br> 5. Activar celda. <br> 6. Seleccionar hastas el final de los datos.</p>
+            </div>
+        </div>
+
+        <div id="fondoPregunta1" class="pregunta">
+            <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+            <p id="tiempo">Tiempo: 30 seg</p>
+            <p id="puntos">Responde la pregunta y gana 100 puntos</p>
+            <p id="pregunta">¿Qué es el cuadro de nombre y que podemos hacer en él?</p>
+        </div>
+
+        <!--PREGUNTAS GRUPALES-->
+        <div id="ayuntamiento" class="pregunta">
+
+            <div id="primero1">
+                <p id="abre1">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado1">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo1" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo1">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="preguntas1">Inserta un formato condicional en la hoja "borrador" donde se resalten los valores únicos del campo "sucursal"  y un formato condicional al campo "antiguedad" de escala de color triple, siendo azul el valor más bajo, gris el punto medio y amarillo el valor más alto. <br>¿Cuántos valores únicos aparecen y de qué color es la celda I49?</p>
+                <p class="respuestaCuadro" id="aa">A. 3 valores únicos, celda amarilla</p>
+                <p class="respuestaCuadro" id="ab">B. 7 valores únicos, celda azul</p>
+                <p class="respuestaCuadro" id="ac">C. Ningún valor único, celda blanca</p>
+                <p class="respuestaCuadro" id="ad">D. Ningún valor único, celda amarilla</p>
+                <p class="respuestaCuadro" id="ae">E. Ningún valor único, celda azul</p>
+                <p class="respuestaCuadro" id="af">F. 2 valores únicos, celda gris</p>
+            </div>
+        </div>
+
+        <div id="estacion" class="pregunta">
+
+            <div id="primero2">
+                <p id="abre2">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado2">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo2" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo2">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="pregunta2">En la hoja "Base de datoss" inserta una nueva columna a la izquierda de la columna "fecha de nacimiento". Nombra esa columna nueva como "acceso". <br>Sin usar funciones ni fórmulas, rellena la columna "acceso" con los 4 primeros digitos del DNI, las 4 primeras letras del segundo apellido y la antiguedad.<br> ¿Qué aparece en la celda D75?</p>
+                <p class="respuestaCuadro" id="ea">A. 3706LIMA10</p>
+                <p class="respuestaCuadro" id="eb">B. 3241RIOS16</p>
+                <p class="respuestaCuadro" id="ec">C. 5124VIBE10</p>
+                <p class="respuestaCuadro" id="ed">D. 3213TINC14</p>
+                <p class="respuestaCuadro" id="ee">E. 1040CELE9</p>
+                <p class="respuestaCuadro" id="ef">F. 5639MARQ11</p>
+            </div>
+        </div>
+
+        <div id="gym" class="pregunta">
+
+            <div id="primero4">
+                <p id="abre4">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado4">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo4" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo4">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo4">Tiempo: 3 minutos</p>
+                <p id="pregunta4">En la hoja "Base de datos", iserta una nueva columna a la izquierda del campo DNI, donde se muestre el usuario a través de funciones. El usuario debe ser:<br>- Los 3 primeros dígitos del DNI<br>- Los 4 últimos caracteres del apellido 2<br>- Los 2 últimos del DNI<br> - Las dos primeras letras del nombre<br> ¿Cuál es el usuario para Arturo Pastor Porras?</p>
+                <p class="respuestaCuadro" id="ga">A. 562ANDA-WJU</p>
+                <p class="respuestaCuadro" id="gb">B. 641RRAS-OAR</p>
+                <p class="respuestaCuadro" id="gc">C. 126STOR-AAR</p>
+                <p class="respuestaCuadro" id="gd">D. 341GADO-XEL</p>
+                <p class="respuestaCuadro" id="ge">E. 435RRAS-OAR</p>
+                <p class="respuestaCuadro" id="gf">F. 435TURO-OAR</p>
+            </div>
+        </div>   
+
+        <div id="hospital" class="pregunta">
+
+            <div id="primero5">
+                <p id="abre5">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado5">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo5" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo5">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="pregunta5">Ordena los datos de la hoja "base de datos", primero por antiguedad de menor a mayor y luego por apellido 1 uno en orden ascendente y por último por nombre en orden descendente.<br> ¿Cuál es el apellido 2 del primer registro?</p>
+                <p class="respuestaCuadro" id="ha">A. Abanto</p>
+                <p class="respuestaCuadro" id="hb">B. Alva</p>
+                <p class="respuestaCuadro" id="hc">C. Alvarado</p>
+                <p class="respuestaCuadro" id="hd">D. Jhong</p>
+                <p class="respuestaCuadro" id="he">E. Benavides</p>
+                <p class="respuestaCuadro" id="hf">F. Espejo</p>
+            </div>
+        </div>
+
+        <div id="laboratorio" class="pregunta">
+
+            <div id="primero6">
+                <p id="abre6">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado6">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo6" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo6">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="pregunta6">Inserta un nuevo estilo de tabla a los datos del rango "cartera". Nombra al estilo: GRUPO_ZOMBIES o GRUPO_RESISTENCIA según corresponda y da a la tabla el siguiente formato:<br>- Fila de encabezado: relleno gris claro<br>- Primera franja de columnas: relleno verde claro<br>- Segunda franja de columnas: relleno verde oscuro<br>- Fila de totales: relleno amarillo claro<br>Modifica el rango de la tabla de manera que ocupe hasta el final de los datos de la hoja. ¿cual es el promedio en dietas?</p>
+                <p class="respuestaCuadro" id="la">A. 1342€</p>
+                <p class="respuestaCuadro" id="lb">B. No se puede calcular.</p>
+                <p class="respuestaCuadro" id="lc">C. 1850€</p>
+                <p class="respuestaCuadro" id="ld">D. 1260€</p>
+                <p class="respuestaCuadro" id="le">E. 1205€</p>
+                <p class="respuestaCuadro" id="lf">F. 1474€</p>
+            </div>
+        </div>
+
+        <div id="museo" class="pregunta">
+
+            <div id="primero7">
+                <p id="abre7">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado7">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo7" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo7">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="pregunta">Copia a una nueva columna los valores del campo "función" de la hoja "Base de datos" y elimina los duplicados, <br>¿cuántos valores únicos aparecen?</p>
+                <p class="respuestaCuadro" id="ma">A. 7</p>
+                <p class="respuestaCuadro" id="mb">B. 89</p>
+                <p class="respuestaCuadro" id="mc">C. 3</p>
+                <p class="respuestaCuadro" id="md">D. Ninguno</p>
+                <p class="respuestaCuadro" id="me">E. 13</p>
+                <p class="respuestaCuadro" id="mf">F. 14</p>
+            </div>
+        </div>
+
+        <div id="pisoFranco" class="pregunta">
+
+            <div id="primero8">
+                <p id="abre8">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado8">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo8" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo8">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="pregunta8">En la hoja "Borrador", calcula a través de fórmulas, funciones y filtros en el rango llamado "totales":<br>- El salario anual mínimo de los directores y directoras de Madrid<br>- La antiguedad mayor de los cajeros de Sevilla<br>- El salario MENSUAL del comercial con mayor salario de madrid teniendo en cuenta 14 pagasMarca las tres opciones correctas </p>
+                <p class="respuestaCuadro" id="ga">A. 7</p>
+                <p class="respuestaCuadro" id="gb">B. 34.781€</p>
+                <p class="respuestaCuadro" id="gc">C. 2.234,07€</p>
+                <p class="respuestaCuadro" id="gd">D. 71.423€</p>
+                <p class="respuestaCuadro" id="ge">E. 8</p>
+                <p class="respuestaCuadro" id="gf">F. 70.409€</p>
+            </div>
+        </div>
+        
+        <div id="restaurante" class="pregunta">
+
+            <div id="primero9">
+                <p id="abre9">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado9">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo9" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo9">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="pregunta9">Inserta las columnas A,B y C de la hoja "Borrador" un formato condicional a las celdas que contengan "NE". <br>Realiza las acciones necesarias para que solo se muestren esos registros en la columna A. ¿qué fila se muestra únicamente?</p>
+                <p class="respuestaCuadro" id="ra">A. 35</p>
+                <p class="respuestaCuadro" id="rb">B. 98</p>
+                <p class="respuestaCuadro" id="rc">C. 3</p>
+                <p class="respuestaCuadro" id="rd">D. 20</p>
+                <p class="respuestaCuadro" id="re">E. 40</p>
+                <p class="respuestaCuadro" id="rf">F. 18</p>
+            </div>
+        </div>
+
+        <div id="salaMusica" class="pregunta">
+
+            <div id="primero10">
+                <p id="abre10">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado10">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo10" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo10">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo10">Tiempo: 3 minutos</p>
+                <p id="pregunta10">Realizad 2 gráficos dinámicos con los datos de la hoja "Borrador" (en la misma página) donde se reflejen:<br>1. El porcentaje del total general de las dientas por función.<br>2. El salario mínimo por Sucursal<br>Inserta la segmentación de datos de sucursal y función y conexionalas con el resto de gráficos.<br> Si seleccionamos analista de riesgos y comercial, ¿Cuál es la ciudad con el salrio más bajo?</p>
+                <p class="respuestaCuadro" id="sma">A. Madrid</p>
+                <p class="respuestaCuadro" id="smb">B. Valencia</p>
+                <p class="respuestaCuadro" id="smc">C. San Sebastián</p>
+                <p class="respuestaCuadro" id="smd">D. Santiago de Compostela</p>
+                <p class="respuestaCuadro" id="sme">E. Sevilla</p>
+                <p class="respuestaCuadro" id="smf">F. Barcelona</p>
+            </div>
+        </div>
+
+        <div id="supermercado" class="pregunta">
+
+            <div id="primero11">
+                <p id="abre11">Abre el archivo llamado TZW1_PC</p>
+                <p id="cuadrado11">Si contestais bien a la pregunta ganas 200 puntos repartidos entre los integrantes del grupo. Si fallais la pregunta, los 200 puntos se restan a vuestro equipo y se suman al equipo contrario. </p>
+                <a><img id="ojo11" src="css/imagenes/ojo.png" class="ojos"></a>
+            </div>
+    
+            <div id="segundo11">
+                <a><img src="css/imagenes/reloj.png" id="reloj"></a>
+                <p id="tiempo">Tiempo: 3 minutos</p>
+                <p id="pregunta11">Con los datos de la hoja "Base de datos" calcula:<br>A través de filtros,  la media de salarios de Madrid y Valencia<br>A través de una tabla dinámica, la media de años de antigüedad de los comerciales de Madrid</p>
+                <p class="respuestaCuadro" id="sa">A. 53.181,55€ y 8,5 años</p>
+                <p class="respuestaCuadro" id="sb">B. 8,5 años y 67.321,67€</p>
+                <p class="respuestaCuadro" id="sc">C. 53.181,55€ y 4 años</p>
+                <p class="respuestaCuadro" id="sd">D. 4 años y 67.321,67€</p>
+                <p class="respuestaCuadro" id="se">E. 67.321,67€ y 19,5 años</p>
+                <p class="respuestaCuadro" id="sf">F. 19.5 años y 53.181,55€</p>
+            </div>
+        </div>
+
+        <div id="confirmacionRespuesta" class="sino">
+            <p>¿La pregunta ha sido respondida correctamente?</p>
+            <button id="si">SÍ</button>
+            <button id="no">NO</button>
+        </div>
+
+        <div id="confirmacionVida" class="sino">
+            <p>¿Quieres gastar una vida extra?</p>
+            <button id="siVida" class="si">SÍ</button>
+            <button id="noVida" class="no">NO</button>
+        </div>
+    
+        <!-- CUANDO PULSAS EN LOS OBJETOS -->
+        
+        <div id="confirmacionMovil" class="confirmacionObj">
+            <p>¿Quieres utilizar el objeto movil?</p>
+            <button id="siMovil" class="siObj">Sí</button>
+            <button id="noMovil" class="noObj">No</button>
+        </div>
+
+        <div id="confirmacionBotiquin">
+            <p>¿Prefieres obtener 200 puntos o una vida extra?</p>
+            <button id="puntosBotiquin" class="siObj">+ 200 puntos</button>
+            <button id="vidaBotiquin" class="noObj">+ 1 vida</button>
+        </div>
+
+        <div id="elegirJugador">
+            <p id="eleJug">Elige un jugador contrario al que quitarle 100 puntos.</p>
+            <div id="contenedorAmplificador"></div>
+        </div>
+
+        <div id="donar">
+            <p id="donJug">Elige un jugador al que donar 100 puntos o no dones puntos.</p>
+            <div id="contenedorMonedas"></div>
+        </div>
+
+         <!--CUANDO PULSAS EN CHAT-->
+         <div id="pantallaChat">
+            <div id="task-chat"></div>
+            <hr id="lineaChat">
+            <div id="chatPropio">
+                <form id="enviarChat" method="get">
+                    <input type="text" id="chatIntroducido">
+                </form>             
+            </div>  
+            <a><button id="botonEnviarChat">Enviar</button></a>   
+            <a><button id="cerrarChat">Cerrar Chat</button></a>                
+        </div>
+
+        <!-- PANTALLA DEL PERSONAJE DE EMY -->
+        <div id="pantallaEmy">
+            <p id="textoEmy">Elige un jugador al que quitar 100 puntos.</p>
+            <div id="contenedorEmy"></div>
+        </div>
+
+        <!-- PANTALLA DEL PERSONAJE LIX -->
+        <div id="pantallaLix">
+            <p id="textoLix">Tienes dos oportunidades para responder a la pregunta.</p>
+        </div>
+
+        <!-- PANTALLA DEL PERSONAJE DR JOW-->
+        <div id="pantallaJow">
+            <p id="textoJow">Elige el jugador al que robarle 50 puntos.</p>
+            <div id="contenedorJow"></div>
+        </div>
+
+        <!-- PANTALLAS DE CUANDO SE UTILIZA UN PERSONAJE -->
+
+        <div id="usoComisarioFred" class="uso">
+            <p>Se ha usado al comisario Fred.</p>
+            <img src="css/imagenes/comisarioFred.png" class="usoPersonaje">
+            <p>Vuelve a ser turno del equipo humano.</p>
+        </div>
+
+        <div id="usoPilotoBrus" class="uso">
+            <p>Se ha usado al Piloto Brus.</p>
+            <img src="css/imagenes/piloto.png" class="usoPersonaje">
+            <p>Vuelve a el tirar dado.</p>
+        </div>
+
+        <div id="usoEmy" class="uso">
+            <p>Se ha usado a Emy.</p>
+            <img src="css/imagenes/emy.png" class="usoPersonaje">
+            <p>Se han quitado 100 puntos a un jugador del equipo zombie.</p>
+        </div>
+
+        <div id="usoLix" class="uso">
+            <p>Se ha usado a la Señorita Lix.</p>
+            <img src="css/imagenes/lix.png" class="usoPersonaje">
+        </div>
+
+        <div id="usoJow" class="uso">
+            <p>Se ha usado al Doctor Jow.</p>
+            <img src="css/imagenes/jow.png" class="usoPersonaje">
+            <p>Se han robado 50 puntos a un jugador del equipo humano.</p>
+        </div>
+
+        <div id="usoSargento" class="uso">
+            <p>Se ha usado al comisario Fred.</p>
+            <img src="css/imagenes/delis.png" class="usoPersonaje">
+            <p>No se ha perdido puntos al fallar la pregunta.</p>
+        </div>
+
+        <!-- PANTALLA DE CUANDO SE USA UN OBJETO -->
+
+        <div id="usoMovil">
+            <p>Se ha usado el móvil.</p>
+            <p>Se ha podido hablar por el chat del equipo.</p>
+        </div>
+
+        <div id="usoMedalla">
+            <p>Se ha usado la medalla.</p>
+            <p>Cada miembro del equipo ha sumado 50 puntos.</p>
+        </div>
+
+        <div id="usoVitaminas">
+            <p>Se han usado las vitaminas.</p>
+            <p>El equipo no puede perder puntos durante 2 turnos.</p>
+        </div>
+
+        <div id="usoPegamento">
+            <p>Se ha usado el pegamento.</p>
+            <p>Salta el turno del equipo contrario.</p>
+        </div>
+
+        <div id="usoAmplificador">
+            <p>Se ha usado el amplificador.</p>
+            <p>Se han quitado 100 puntos a un jugador del equipo contrario.</p>
+        </div>
+
+        <div id="usoMonedas">
+            <p>Se han usado las monedas.</p>
+        </div>
+
+        <div id="usoBotiquin">
+            <p>Se ha usado el botiquín.</p>
+        </div>
+
+    </body>
+</html>

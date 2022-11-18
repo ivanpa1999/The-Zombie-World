@@ -1,0 +1,3649 @@
+body{
+    background-color: black;
+}
+
+/*PARTE MARRON DE LA IZQUIERDA */
+
+#rectanguloMarron{
+    background-image: url("imagenes/marron.png");
+    position: absolute;
+    height: 710px;
+    width: 200px;
+    top: 0px;
+    left: 0px;
+}
+
+#top3{
+    position: absolute;
+    top: 64%;
+}
+
+#tiraDado{
+    position: absolute;
+    top: 32%;
+    font-size: 20px;
+    color: rgba(233, 255, 88, 0.849);
+    text-align: center;
+}
+
+#flecha{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    left: 36%;
+    top: 45%;
+}
+
+.cursor1:hover{
+    cursor: pointer;
+    border: 3px solid rgb(21, 12, 90);
+}
+
+.cursor2:hover{
+    cursor: pointer;
+    border: 3px solid rgb(246, 246, 248);
+}
+
+.dado{
+    cursor: pointer;
+    width: 70px;
+    height: 110px;
+    top: 48%;
+    left: 31%;
+    position: absolute;
+}
+
+#dado2{
+    visibility: hidden;
+}
+
+#dado3{
+    visibility: hidden;
+}
+
+#dado4{
+    visibility: hidden;
+}
+
+#dado5{
+    visibility: hidden;
+}
+
+#dado6{
+    visibility: hidden;
+}
+
+#dado1E{
+    visibility: hidden;
+}
+
+#dado2E{
+    visibility: hidden;
+}
+
+#dado3E{
+    visibility: hidden;
+}
+
+#dado4E{
+    visibility: hidden;
+}
+
+#dado5E{
+    visibility: hidden;
+}
+
+#dado6E{
+    visibility: hidden;
+}
+
+#personajes{
+    position: relative;
+    margin-top: 75%;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    top: -110%;
+}
+
+#personaje1{
+    position: absolute;
+    width: 75px;
+    height: 100px;
+    left: 10%;
+    top: 20%;
+}
+
+#personaje2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    object-fit: cover;
+    object-position: 0% 0%;
+    top: 60%;
+}
+
+#personaje3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 42%;
+    object-fit: cover;
+    object-position: 0% 0%;
+    top: 20%;
+}
+
+#personaje4{
+    position: absolute;
+    left: 42%;
+    top: 60%;
+    width: 50px;
+    height: 50px;
+    width: 75px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+#personaje5{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 74%;
+    object-fit: cover;
+    object-position: 0% 0%;
+    margin-top: 0%;
+    top: 20%;
+}
+
+#personaje6{
+    position: absolute;
+    width: 80px;
+    height: 90px;
+    left: 5%;
+    object-fit: cover;
+    object-position: 0% 0%;
+    margin-top: 0%;
+    top: 60%;
+    left: 74%;
+}
+
+/* PARTE BOSQUE CENTRAL */
+
+#imagenCentral{
+    width: 1300px;
+    height: 710px;
+}
+
+/* PARTE DERECHA */
+
+#casa{
+    max-width: 85px;
+    position: absolute;
+    left: 91%;
+    top: 4%;
+}
+
+.button{
+    background-color: #4CAF50; /* Green */
+    position: absolute;
+    height: 60px;
+    width: 175px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#botonObjetos{
+    position: absolute;
+    left: 90%;
+    top: 20%;
+    height: 100px;
+    width: 100px;
+}
+
+#botonJugadores{ 
+    position: absolute;
+    left: 90%;
+    top: 36%; 
+    height: 100px;
+    width: 100px;
+}
+
+#botonChat{ 
+    position: absolute; 
+    left: 90%;
+    top: 51%;
+    height: 100px;
+    width: 100px;
+}
+
+#interrogacion{
+    position: absolute;
+    left: 93.5%;
+    top: 89%;
+    max-width: 75px;
+    cursor: pointer;
+}
+
+/* PANTALLA OBJETOS */
+
+#pantallaObjetos{
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    height: 330px;
+    width: 310px;
+    visibility: hidden;
+}
+
+.bolsa{
+    width: 300px;
+    height: 300px;
+}
+
+#aceptarObjetos{
+    position: relative;
+    left: -15%;
+}
+
+.movil{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#movilH{
+    left: -16%;
+    top: -75%;   
+}
+
+.medalla{
+    position: relative;
+    height: 80px;
+    width: 55px;
+    visibility: hidden;
+}
+
+#medallaH{
+    left: -27%;
+    top: -45%;
+}
+
+.vitaminas{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    visibility: hidden;
+}
+
+#vitaminasH{
+    left: -27%;
+    top: -40%;
+}
+
+.pegamento{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    visibility: hidden;
+}
+
+#pegamentoH{
+    top: -70%;
+    left: 70%;
+}
+
+.amplificador{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    top: -80%;
+    visibility: hidden;
+}
+
+#amplificadorH{
+    left: 30%;
+    top: -100%;
+}
+
+.monedas{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    top: -60%;
+    visibility: hidden;
+}
+
+#monedasH{
+    left: -57%;
+    top: -65%;
+}
+
+.botiquin{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    visibility: hidden;
+}
+
+#botiquinH{
+    top: -130%;
+    left: 25%;
+}
+
+#aceptarObjetos{
+    position: relative;
+    left: 75%;
+    top: -23%;
+}
+
+/* PANTALLA INTERROGACION */
+
+#pantallaInterrogacion{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    height: 300px;
+    background-color: rgb(230, 214, 214);
+    color: aliceblue;
+    border: solid 2px blue;
+    visibility: hidden;
+}
+
+#titulo{
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline solid;
+    color: black;
+}
+
+.texto{
+    margin: 10px;
+    color: black;
+}
+
+#aceptarInterrogacion{
+    position: relative;
+    left: 90%;
+    top: -1.5%;   
+}
+
+/* TABLERO DE HEXAGONOS */
+
+.hexagono{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+#hAyuntamiento{
+    left: 78.5%;
+    top: 30%;
+    height: 100px;
+    width: 100px;
+}
+
+#hEstacion{
+    left: 28%;
+    top: 33%;
+    height: 80px;
+    width: 100px;
+}
+
+#hGym{
+    top: 66%;
+    left: 26%;
+    height: 80px;
+    width: 80px;
+}
+
+#hHospital{
+    top: 19%;
+    left: 49.5%;
+    height: 100px;
+    width: 100px;
+}
+
+#hInterrogacion{
+    left: 41%;
+    top: 79%;
+}
+
+#hLaboratorio{
+    left: 34.8%;
+    top: 6%;
+    height: 70px;
+    width: 70px;
+}
+
+#hMuseo{
+    left: 77.5%;
+    top: 80%;
+    height: 100px;
+    width: 100px;
+}
+
+#hPisoFranco{
+    width: 80px;
+    height: 80px;
+    left: 73%;
+    top: 8%;
+}
+
+#hRestaurante{
+    left: 14.5%;
+    top: 6.5%;
+    height: 80px;
+    width: 80px;
+}
+
+#hSalaMusica{
+    left: 13%;
+    top: 25%;
+}
+
+#hSupermercado{
+    top: 85%;
+    left: 24.5%;
+    height: 100px;
+    width: 100px;
+}
+
+#hAyuntamiento2{
+    left: 78.5%;
+    top: 30%;
+    height: 100px;
+    width: 100px;
+    visibility: hidden;
+}
+
+#hEstacion2{
+    left: 28%;
+    top: 33%;
+    height: 80px;
+    width: 100px;
+    visibility: hidden;
+}
+
+#hGym2{
+    top: 66%;
+    left: 26%;
+    height: 80px;
+    width: 80px;
+    visibility: hidden;
+}
+
+#hHospital2{
+    top: 19%;
+    left: 49.5%;
+    height: 100px;
+    width: 100px;
+    visibility: hidden;
+}
+
+#hInterrogacion2{
+    left: 41%;
+    top: 79%;
+}
+
+#hLaboratorio2{
+    left: 34.8%;
+    top: 6%;
+    height: 70px;
+    width: 70px;
+    visibility: hidden;
+}
+
+#hMuseo2{
+    left: 77.5%;
+    top: 80%;
+    height: 100px;
+    width: 100px;
+    visibility: hidden;
+}
+
+#hPisoFranco2{
+    width: 80px;
+    height: 80px;
+    left: 73%;
+    top: 8%;
+    visibility: hidden;
+}
+
+#hRestaurante2{
+    left: 14.5%;
+    top: 6.5%;
+    height: 80px;
+    width: 80px;
+    visibility: hidden;
+}
+
+#hSalaMusica2{
+    left: 13%;
+    top: 25%;
+    visibility: hidden;
+}
+
+#hSupermercado2{
+    top: 85%;
+    left: 24.5%;
+    height: 100px;
+    width: 100px;
+    visibility: hidden;
+}
+
+.hexagonoPeq{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+#h1{
+    left: 20.5%;
+    top: 92%;
+}
+
+#h2{
+    left: 18%;
+    top: 89%;
+}
+
+#h3{
+    left: 15.6%;
+    top: 85.8%;
+}
+
+#h4{
+    left: 15.6%;
+    top: 78.9%;
+}
+
+#h5{
+    left: 17.5%;
+    top: 73.5%;
+}
+
+#h6{
+    left: 19.8%;
+    top: 70%;
+}
+
+#h7{
+    left: 22.2%;
+    top: 67%;
+}
+
+#h8{
+    left: 22.2%;
+    top: 60.2%;
+}
+
+#h9{
+    left: 19.9%;
+    top: 57%;
+}
+
+#h10{
+    left: 17.5%;
+    top: 53.8%;
+}
+
+#h11{
+    left: 17.5%;
+    top: 47.1%;
+}
+
+#h12{
+    left: 17.5%;
+    top:40.4%;
+}
+
+#h13{
+    left: 19.85%;
+    top: 37.5%;
+}
+
+#h14{
+    left: 19.85%;
+    top: 44%;
+}
+
+#h15{
+    left: 22.2%;
+    top: 47%;
+}
+
+#h16{
+    left: 22.2%;
+    top: 34.5%;
+}
+
+#h17{
+    left: 24.6%;
+    top: 31.6%;
+}
+
+#h18{
+    left: 24.6%;
+    top: 25%;
+}
+
+#h19{
+    left: 24.6%;
+    top: 18.5%;
+}
+
+#h20{
+    left: 22.3%;
+    top: 21.5%;
+}
+
+#h21{
+    left: 19.9%;
+    top: 24.5%;
+}
+
+#h22{
+    left: 24.6%;
+    top: 12%;
+}
+
+#h23{
+    left: 22.2%;
+    top: 9%;
+}
+
+#h24{
+    left: 19.9%;
+    top: 5.5%;
+}
+
+#h25{
+    left: 27%;
+    top: 9%;
+}
+
+#h26{
+    left: 29.5%;
+    top: 12%;
+}
+
+#h27{
+    left: 31.8%;
+    top: 15%;
+}
+
+#h28{
+    left: 34.1%;
+    top: 18.2%;
+}
+
+#h29{
+    left: 34.1%;
+    top: 25%;
+}
+
+#h30{
+    left: 34.1%;
+    top: 32%;
+}
+
+#h31{
+    left: 24.6%;
+    top: 50%;
+}
+
+#h32{
+    left: 26.9%;
+    top: 46.5%;
+}
+
+#h33{
+    left: 29.4%;
+    top: 43.4%;
+}
+
+#h34{
+    left: 36.5%;
+    top: 28.8%;
+}
+
+#h35{
+    left: 38.9%;
+    top: 25.8%;
+}
+
+#h36{
+    left: 41.4%;
+    top: 28.8%;
+}
+
+#h37{
+    left: 43.8%;
+    top: 25.8%;
+}
+
+#h38{
+    left: 46%;
+    top: 22%;
+}
+
+#h39{
+    left: 36.4%;
+    top: 35.8%;
+}
+
+#h40{
+    left: 38.6%;
+    top: 39.5%;
+}
+
+#h41{
+    left: 41.2%;
+    top: 42%;
+}
+
+#h42{
+    left: 43.6%;
+    top: 45%;
+}
+
+#h43{
+    left: 31.9%;
+    top: 46%;
+}
+
+#h44{
+    left: 34.4%;
+    top: 48.9%;
+}
+
+#h45{
+    left: 36.7%;
+    top: 45%;
+}
+
+#h46{
+    left: 46%;
+    top: 48%;
+}
+
+#h47{
+    left: 48.5%;
+    top: 45%;
+}
+
+#h48{
+    left: 50.7%;
+    top: 41.2%;
+}
+
+#h49{
+    left: 53.1%;
+    top: 38.3%;
+}
+
+#h50{
+    left: 55.5%;
+    top: 35.5%;
+}
+
+#h51{
+    left: 55.5%;
+    top: 29%;
+}
+
+#h52{
+    left: 55.5%;
+    top: 22.5%;
+}
+
+#h53{
+    left: 55.5%;
+    top: 16.1%;
+}
+
+#h54{
+    left: 55.5%;
+    top: 9.5%;
+}
+
+#h55{
+    left: 53.2%;
+    top: 6%;
+}
+
+#h56{
+    left: 50.8%;
+    top: 9.5%;
+}
+
+#h57{
+    left: 48.5%;
+    top: 6%;
+}
+
+#h58{
+    left: 46.2%;
+    top: 9.5%;
+}
+
+#h59{
+    left: 43.8%;
+    top: 6%;
+}
+
+#h60{
+    left: 41.4%;
+    top: 9.5%;
+}
+
+#h61{
+    left: 39%;
+    top: 6%;
+}
+
+#h62{
+    left: 57.8%;
+    top: 6%;
+}
+
+#h63{
+    left: 60.1%;
+    top: 9.5%;
+}
+
+#h64{
+    left: 62.3%;
+    top: 6%;
+}
+
+#h65{
+    left: 64.5%;
+    top: 9.5%;
+}
+
+#h66{
+    left: 66.7%;
+    top: 6%;
+}
+
+#h67{
+    left: 69%;
+    top: 9.5%;
+}
+
+#h68{
+    left: 57.8%;
+    top: 32%;
+}
+
+#h69{
+    left: 60.2%;
+    top: 34.8%;
+}
+
+#h70{
+    left: 62.6%;
+    top: 32%;
+}
+
+#h71{
+    left: 53%;
+    top: 45%;
+}
+
+#h72{
+    left: 55.2%;
+    top: 49%;
+}
+
+#h73{
+    left: 59.8%;
+    top: 41.5%;
+}
+
+#h74{
+    left: 57.5%;
+    top: 45%;
+}
+
+#h75{
+    left: 55.2%;
+    top: 55.6%;
+}
+
+#h76{
+    left: 57.7%;
+    top: 58.5%;
+}
+
+#h77{
+    left: 60%;
+    top: 62%;
+}
+
+#h78{
+    left: 62.3%;
+    top: 65%;
+}
+
+#h79{
+    left: 64.7%;
+    top: 62%;
+}
+
+#h80{
+    left: 67.2%;
+    top: 64.5%;
+}
+
+#h81{
+    left: 69.5%;
+    top: 61%;
+}
+
+#h82{
+    left: 60.1%;
+    top: 68.6%;
+}
+
+#h83{
+    left: 57.8%;
+    top: 71.5%;
+}
+
+#h84{
+    left: 46%;
+    top: 54.5%;
+}
+
+#h85{
+    left: 46%;
+    top: 61.2%;
+}
+
+#h86{
+    left: 46%;
+    top: 68%;
+}
+
+#h87{
+    left: 48.1%;
+    top: 71%;
+}
+
+#h88{
+    left: 50.5%;
+    top: 74%;
+}
+
+#h89{
+    left: 53%;
+    top: 76.25%;
+}
+
+#h90{
+    left: 55.45%;
+    top: 74%;
+}
+
+#h91{
+    left: 45%;
+    top: 74.5%;
+}
+
+#h92{
+    left: 39.5%;
+    top: 78%;
+}
+
+#h93{
+    left: 38.5%;
+    top: 71%;
+}
+
+#h94{
+    left: 36.4%;
+    top: 67%;
+}
+
+#h95{
+    left: 36.4%;
+    top: 60.4%;
+}
+
+#h96{
+    left: 34.5%;
+    top: 55.5%;
+}
+
+#h97{
+    left: 72.1%;
+    top: 64.5%;
+}
+
+#h98{
+    left: 72.1%;
+    top: 71.2%;
+}
+
+#h99{
+    left: 74.3%;
+    top: 74.9%;
+}
+
+#h100{
+    left: 65.1%;
+    top: 35%;
+}
+
+#h101{
+    left: 67.4%;
+    top: 31.5%;
+}
+
+#h102{
+    left: 69.8%;
+    top: 34.6%;
+}
+
+#h103{
+    left: 72.2%;
+    top: 31.5%;
+}
+
+#h104{
+    left: 74.6%;
+    top: 34.6%;
+}
+
+#h115{
+    left: 42.5%;
+    top: 78%;
+}
+
+/* FICHAS */
+
+.ficha{
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 50%;
+}
+
+#fichaHumano{
+    left: 46%;
+}
+
+#fichaZombie{
+    left: 48%;
+}
+
+/* HEXAGONOS NEGROS */
+
+.hexagonoNegro{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    visibility: hidden;
+}
+
+#hn1{
+    left: 20.5%;
+    top: 92%;
+}
+
+#hn2{
+    left: 18%;
+    top: 89%;
+}
+
+#hn3{
+    left: 15.6%;
+    top: 85.8%;
+}
+
+#hn4{
+    left: 15.6%;
+    top: 78.9%;
+}
+
+#hn5{
+    left: 17.5%;
+    top: 73.5%;
+}
+
+#hn6{
+    left: 19.8%;
+    top: 70%;
+}
+
+#hn7{
+    left: 22.2%;
+    top: 67%;
+}
+
+#hn8{
+    left: 22.2%;
+    top: 60.2%;
+}
+
+#hn9{
+    left: 19.9%;
+    top: 57%;
+}
+
+#hn10{
+    left: 17.5%;
+    top: 53.8%;
+}
+
+#hn11{
+    left: 17.5%;
+    top: 47.1%;
+}
+
+#hn12{
+    left: 17.5%;
+    top:40.4%;
+}
+
+#hn13{
+    left: 19.85%;
+    top: 37.5%;
+}
+
+#hn14{
+    left: 19.85%;
+    top: 44%;
+}
+
+#hn15{
+    left: 22.2%;
+    top: 47%;
+}
+
+#hn16{
+    left: 22.2%;
+    top: 34.5%;
+}
+
+#hn17{
+    left: 24.6%;
+    top: 31.6%;
+}
+
+#hn18{
+    left: 24.6%;
+    top: 25%;
+}
+
+#hn19{
+    left: 24.6%;
+    top: 18.5%;
+}
+
+#hn20{
+    left: 22.3%;
+    top: 21.5%;
+}
+
+#hn21{
+    left: 19.9%;
+    top: 24.5%;
+}
+
+#hn22{
+    left: 24.6%;
+    top: 12%;
+}
+
+#hn23{
+    left: 22.2%;
+    top: 9%;
+}
+
+#hn24{
+    left: 19.9%;
+    top: 5.5%;
+}
+
+#hn25{
+    left: 27%;
+    top: 9%;
+}
+
+#hn26{
+    left: 29.5%;
+    top: 12%;
+}
+
+#hn27{
+    left: 31.8%;
+    top: 15%;
+}
+
+#hn28{
+    left: 34.1%;
+    top: 18.2%;
+}
+
+#hn29{
+    left: 34.1%;
+    top: 25%;
+}
+
+#hn30{
+    left: 34.1%;
+    top: 32%;
+}
+
+#hn31{
+    left: 24.6%;
+    top: 50%;
+}
+
+#hn32{
+    left: 26.9%;
+    top: 46.5%;
+}
+
+#hn33{
+    left: 29.4%;
+    top: 43.4%;
+}
+
+#hn34{
+    left: 36.5%;
+    top: 28.8%;
+}
+
+#hn35{
+    left: 38.9%;
+    top: 25.8%;
+}
+
+#hn36{
+    left: 41.4%;
+    top: 28.8%;
+}
+
+#hn37{
+    left: 43.8%;
+    top: 25.8%;
+}
+
+#hn38{
+    left: 46%;
+    top: 22%;
+}
+
+#hn39{
+    left: 36.4%;
+    top: 35.8%;
+}
+
+#hn40{
+    left: 38.6%;
+    top: 39.5%;
+}
+
+#hn41{
+    left: 41.2%;
+    top: 42%;
+}
+
+#hn42{
+    left: 43.6%;
+    top: 45%;
+}
+
+#hn43{
+    left: 31.9%;
+    top: 46%;
+}
+
+#hn44{
+    left: 34.4%;
+    top: 48.9%;
+}
+
+#hn45{
+    left: 36.7%;
+    top: 45%;
+}
+
+#hn46{
+    left: 46%;
+    top: 48%;
+}
+
+#hn47{
+    left: 48.5%;
+    top: 45%;
+}
+
+#hn48{
+    left: 50.7%;
+    top: 41.2%;
+}
+
+#hn49{
+    left: 53.1%;
+    top: 38.3%;
+}
+
+#hn50{
+    left: 55.5%;
+    top: 35.5%;
+}
+
+#hn51{
+    left: 55.5%;
+    top: 29%;
+}
+
+#hn52{
+    left: 55.5%;
+    top: 22.5%;
+}
+
+#hn53{
+    left: 55.5%;
+    top: 16.1%;
+}
+
+#hn54{
+    left: 55.5%;
+    top: 9.5%;
+}
+
+#hn55{
+    left: 53.2%;
+    top: 6%;
+}
+
+#hn56{
+    left: 50.8%;
+    top: 9.5%;
+}
+
+#hn57{
+    left: 48.5%;
+    top: 6%;
+}
+
+#hn58{
+    left: 46.2%;
+    top: 9.5%;
+}
+
+#hn59{
+    left: 43.8%;
+    top: 6%;
+}
+
+#hn60{
+    left: 41.4%;
+    top: 9.5%;
+}
+
+#hn61{
+    left: 39%;
+    top: 6%;
+}
+
+#hn62{
+    left: 57.8%;
+    top: 6%;
+}
+
+#hn63{
+    left: 60.1%;
+    top: 9.5%;
+}
+
+#hn64{
+    left: 62.3%;
+    top: 6%;
+}
+
+#hn65{
+    left: 64.5%;
+    top: 9.5%;
+}
+
+#hn66{
+    left: 66.7%;
+    top: 6%;
+}
+
+#hn67{
+    left: 69%;
+    top: 9.5%;
+}
+
+#hn68{
+    left: 57.8%;
+    top: 32%;
+}
+
+#hn69{
+    left: 60.2%;
+    top: 34.8%;
+}
+
+#hn70{
+    left: 62.6%;
+    top: 32%;
+}
+
+#hn71{
+    left: 53%;
+    top: 45%;
+}
+
+#hn72{
+    left: 55.2%;
+    top: 49%;
+}
+
+#hn73{
+    left: 59.8%;
+    top: 41.5%;
+}
+
+#hn74{
+    left: 57.5%;
+    top: 45%;
+}
+
+#hn75{
+    left: 55.2%;
+    top: 55.6%;
+}
+
+#hn76{
+    left: 57.7%;
+    top: 58.5%;
+}
+
+#hn77{
+    left: 60%;
+    top: 62%;
+}
+
+#hn78{
+    left: 62.3%;
+    top: 65%;
+}
+
+#hn79{
+    left: 64.7%;
+    top: 62%;
+}
+
+#hn80{
+    left: 67.2%;
+    top: 64.5%;
+}
+
+#hn81{
+    left: 69.5%;
+    top: 61%;
+}
+
+#hn82{
+    left: 60.1%;
+    top: 68.6%;
+}
+
+#hn83{
+    left: 57.8%;
+    top: 71.5%;
+}
+
+#hn84{
+    left: 46%;
+    top: 54.5%;
+}
+
+#hn85{
+    left: 46%;
+    top: 61.2%;
+}
+
+#hn86{
+    left: 46%;
+    top: 68%;
+}
+
+#hn87{
+    left: 48.1%;
+    top: 71%;
+}
+
+#hn88{
+    left: 50.5%;
+    top: 74%;
+}
+
+#hn89{
+    left: 53%;
+    top: 76.25%;
+}
+
+#hn90{
+    left: 55.45%;
+    top: 74%;
+}
+
+#hn91{
+    left: 45%;
+    top: 74.5%;
+}
+
+#hn92{
+    left: 38.5%;
+    top: 78%;
+}
+
+#hn93{
+    left: 38.5%;
+    top: 71%;
+}
+
+#hn94{
+    left: 36.4%;
+    top: 67%;
+}
+
+#hn95{
+    left: 36.4%;
+    top: 60.4%;
+}
+
+#hn96{
+    left: 34.5%;
+    top: 55.5%;
+}
+
+#hn97{
+    left: 72.1%;
+    top: 64.5%;
+}
+
+#hn98{
+    left: 72.1%;
+    top: 71.2%;
+}
+
+#hn99{
+    left: 74.3%;
+    top: 74.9%;
+}
+
+#hn100{
+    left: 65.1%;
+    top: 35%;
+}
+
+#hn101{
+    left: 67.4%;
+    top: 31.5%;
+}
+
+#hn102{
+    left: 69.8%;
+    top: 34.6%;
+}
+
+#hn103{
+    left: 72.2%;
+    top: 31.5%;
+}
+
+#hn104{
+    left: 74.6%;
+    top: 34.6%;
+}
+
+/* MENSAJE PARA MOVER LA FICHA */
+
+#pantallaMoverFicha{
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    height:110px;
+    width: 200px;
+    background-color: rgb(230, 214, 214);
+    color: black;
+    border: solid 2px blue;
+    visibility: hidden;
+}
+
+/* MENSAJE QUE SALE AL PULSAR UN PERSONAJE */
+
+#pantallaPersonajes{
+    position: absolute;
+    visibility: hidden;
+    top: 15%;
+    left: 45%;
+    background-color: rgb(230, 214, 214);
+    color: aliceblue;
+    border: solid 2px blue;
+    width: 200px;
+    height: 135px;
+}
+
+.textoPersonajes{
+   visibility: hidden;
+   position: absolute;
+   color: black;
+}
+
+#aceptarPersonajes{
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 60%;
+    top: 80%;
+    left: 5%;
+}
+
+/* MENSAJE QUE SALE AL PULSAR JUGADORES */
+
+#pantallaJugadores{
+    visibility: hidden;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 700px;
+    background-color: rgb(230, 214, 214);
+    color: black;
+    border: solid 2px blue;
+}
+
+.tituloJugadores{
+    position: relative;
+    width: 300px;
+    text-align: center;
+    font-size: large;
+}
+
+#equipoHumano{
+    float: left;
+}
+
+#equipoZombie{
+    float: right;
+}
+
+#taskHumano{
+    float: left;
+}
+
+#taskZombie{
+    float: right;
+}
+
+.estudianteTask{
+    position: relative;
+    width: 350px;
+    text-align: center;
+}
+
+#aceptarPersonas{
+    position: relative;
+    left: 40%;
+    margin-bottom: 10px;
+    margin-top: 4%;
+    top: 0%;
+}
+
+/* CHAT */
+
+#pantallaChat{
+    position: absolute;
+    background-color: rgb(230, 214, 214);
+    color: aliceblue;
+    width: 450px;
+    height: 430px;
+    border: solid 2px blue;
+    top: 35%;
+    left: 55%;
+    visibility: hidden;
+}
+
+#chatPropio{
+    background-color: rgba(255, 255, 255, 0.0);
+    position: absolute;
+    top: 84%;
+    left: 10%;
+}
+
+#cerrarChat{
+    position: absolute;
+    top: 8%;
+}
+
+#botonEnviarChat{
+    position: absolute;
+    top: 89%;
+    left: 80%;
+}
+
+#task-chat{
+    /*border: solid 1px black;*/
+    margin-bottom: 5px;
+}
+
+#lineaChat{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    width: 400px;
+}
+
+#enviarChat{
+    position: absolute;
+    left: -10%;
+}
+
+.chatTask{
+    color: black;
+}
+
+.lineasChat{
+    color: black;
+    line-height: 0.17;
+}
+
+#enviarChat{
+    border: solid 1px rgba(164, 38, 38, 0.0);
+    position: relative;
+}
+
+#chatIntroducido{
+    width: 350px;
+    float: left;
+    top: 5%;
+    margin-left: 5px;
+}
+
+#botonEnviarChat{
+    position: absolute;
+    top: 84.5%;
+    left: 85%;
+}
+
+#cerrarChat{
+    position: absolute;
+    top: 92.5%;
+    left: 80%;
+}
+
+/* PLAY Y PAUSA DEL PROFESOR */
+
+#play{
+    max-width: 60px;
+    position: absolute;
+    left: 87.5%;
+    top: 90%;
+    visibility: hidden;
+}
+
+#pausa{
+    max-width: 60px;
+    position: absolute;
+    left: 87.5%;
+    top: 90%;
+    visibility: hidden;
+}
+
+/* PREGUNTAS */
+
+.pregunta{
+    background-color: rgba(246, 247, 238, 1);
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border: solid 1px blue;
+    visibility: hidden;
+}
+
+.preguntaG{
+    background-color: rgba(246, 247, 238, 0.94);
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border: solid 1px blue;
+}
+
+#tiempo{    /* TEXTOS */
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    color: rgb(116, 116, 10);
+    font-size: 30px;
+}
+
+#tiempo4{    /* TEXTOS */
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    color: rgb(116, 116, 10);
+    background-color: aliceblue;
+    font-size: 30px;
+}
+
+#puntos{
+    position: relative;
+    top: 5%;
+    text-align: center;
+    font-size: 20px;
+}
+
+#pregunta{
+    position: relative;
+    text-align: center;
+    top:5%;
+    font-size: 45px;
+}
+
+
+#preguntasPeq{
+    position: relative;
+    text-align: center;
+    top:5%;
+    font-size: 35px;
+}
+
+#reloj{     /* IMAGENES */
+    position: relative;
+    top: 2.5%;
+    left: 3%;
+    height: 100px;
+    width: 100px;
+    transform: skewY(-20deg);
+}
+
+#ojo{
+    position: relative;
+    top: 10%;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+}
+
+#ojo3{
+    position: relative;
+    top: 10%;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+}
+
+#excel{
+    position: relative;
+    left: 10%;
+}
+
+#izquierda{     /* PREGUNTA 2 */
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 57px;
+    float: left;
+    position: relative;
+    left: 10%;
+    max-width: 45%;
+}
+
+#derecha{
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+    margin-left: 10px;
+    left: 45%;
+    float: left;
+    max-width: 45%;
+}
+
+.respuestaCuadro{   /* RESPUESTA EN CUADRO */
+    background-color: bisque;
+    position: relative;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 57px;
+    float: left;
+    width: 25%;
+    border: solid 1px blue;
+    text-align: center;
+    height: 7.5%;
+}
+
+#mover{
+    position: relative;
+    left: 15%;
+}
+
+#excel{
+    position: absolute;
+    top:2.5%;
+    visibility: hidden;
+}
+
+#pruebaBoton{
+    position: absolute;
+    top: 90%;
+    left: 83%;
+    visibility: hidden;
+}
+
+#laboratorio{
+    background-image: url("imagenes/laboratorioFondo.png");
+}
+
+#ayuntamiento{
+    background-image: url("imagenes/ayuntamientoFondo.png");
+}
+
+#hospital{
+    background-image: url("imagenes/hospitalFondo.png");
+}
+
+#estacion{
+    background-image: url("imagenes/estacionFondo.png");
+}
+
+#museo{
+    background-image: url("imagenes/museoFondo.png");
+}
+
+#restaurante{
+    background-image: url("imagenes/restauranteFondo.png");
+}
+
+#supermercado{
+    background-image: url("imagenes/supermercadoFondo.png");
+}
+
+#salaMusica{
+    background-image: url("imagenes/sala\ de\ musicaFondo.png");
+}
+
+#gym{
+    background-image: url("imagenes/gymFondo.png");
+}
+
+#pisoFranco{
+    background-image: url("imagenes/pisoFrancoFondo.png");
+}
+
+/* PRIMERA PARTE */
+
+#primero{
+    visibility: hidden;
+}
+
+#primero2{
+    visibility: hidden;
+}
+
+#primero4{
+    visibility: hidden;
+}
+
+#primero5{
+    visibility: hidden;
+}
+
+#primero6{
+    visibility: hidden;
+}
+
+#primero7{
+    visibility: hidden;
+}
+
+#primero8{
+    visibility: hidden;
+}
+
+#primero9{
+    visibility: hidden;
+}
+
+#primero10{
+    visibility: hidden;
+}
+
+#primero11{
+    visibility: hidden;
+}
+
+#abre1{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#abre2{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#abre4{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#abre5{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+}
+
+#abre6{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#abre7{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#abre8{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#abre9{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#abre10{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+}
+
+#abre11{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 5%;
+    visibility: hidden;
+}
+
+#cuadrado{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado1{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado2{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado4{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado5{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+}
+
+#cuadrado6{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado7{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado8{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado9{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado10{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+#cuadrado11{
+    background-color: gray;
+    filter:alpha(opacity=70);
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    left: 18%;
+    top: 30%;
+    visibility: hidden;
+}
+
+/* SEGUNDA PARTE */
+
+#segundo1{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo2{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo4{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo5{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo6{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo7{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo8{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo9{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo10{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#segundo11{
+    visibility: hidden;
+    height: 610px;
+    width: 1200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#tiempo{
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    color: rgb(116, 116, 10);
+    font-size: 30px;
+}
+
+#preguntas{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#preguntas1{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta2{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta4{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta5{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta6{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta7{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta8{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta9{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta10{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+#pregunta11{
+    background-color: rgba(246, 247, 238, 0.682);
+    border: solid 1px blue;
+    position: relative;
+    text-align: center;
+    top:5%;
+    left: -2%;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+.respuestaCuadro{
+    background-color: rgb(133, 164, 207);
+    position: relative;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 57px;
+    top: 5%;
+    left: -8%;
+    float: left;
+    width: 25%;
+    border: solid 1px blue;
+    text-align: center;
+    height: 7.5%;
+}
+
+.ojos{
+    position: absolute;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    left: 45%;
+    top: 60%;
+    visibility: hidden;
+}
+
+#ga{
+    top: 0%;
+}
+
+#gb{
+    top: 0%;
+}
+
+#gc{
+    top: 0%;
+}
+
+#gd{
+    top: 0%;
+}
+
+#ge{
+    top: 0%;
+}
+
+#gf{
+    top: 0%;
+}
+
+#pregunta6{
+    font-size: 20px;
+}
+
+#pregunta8{
+    font-size: 25px;
+}
+
+#pregunta9{
+    font-size: 25px;
+}
+
+#pregunta10{
+    font-size: 25px;
+}
+
+#tiempo10{
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    color: black;
+    font-size: 30px;
+}
+
+#pregunta11{
+    font-size: 30px;
+}
+
+.respuestaCuadro4{
+    position: relative;
+    left: 2%;
+    background-color: bisque;
+    position: relative;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 57px;
+    float: left;
+    width: 25%;
+    border: solid 1px blue;
+    text-align: center;
+    height: 7.5%;
+}
+
+/*PERSONAJES ESPECIALES*/
+
+#personajesBoton{
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    height: 100px;
+    width: 100px;
+}
+
+#ventanaPersonajes{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    height: 330px;
+    width: 500px;
+    visibility: hidden;
+}
+
+#cerrarPersonajes{
+    position: absolute;
+    top: 90%;
+    left: 85%;
+}
+
+/* PANTALLA NUEVO TURNO */
+
+#pantallaNuevoTurno{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    height: 330px;
+    width: 500px;
+    visibility: hidden;
+}
+
+.chatTurno{
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#equipoTurno{
+    font-size: 30px;
+}
+
+#jugadorTurno{
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+#aceptarTurno{
+    position: absolute;
+    left: 85%;
+    top: 90%;
+}
+
+/* RANKING */
+
+#rankingTexto{
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    margin-top: 1%;
+    font-weight: bold;
+}
+
+/* PERFIL */
+
+.raya{
+    position: absolute;
+    width: 92.5%;
+    left: 2.5%;
+}
+
+#raya1{  
+    top: 33%;
+}
+
+#raya2{
+    top: 62%;
+}
+
+#perfilTexto{
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+#perfilUsuario{
+    font-weight: bold;
+}
+
+#emy{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 20%;
+}
+
+#lix{
+    height: 85px;
+    width: 75px;
+    position: relative;
+    left: 20%;
+}
+
+#jow{
+    height: 100px;
+    width: 80px;
+    position: relative;
+    left: 20%;
+}
+
+#brus{
+    height: 100px;
+    width: 80px;
+    position: relative;
+    left: 20%;
+}
+
+#delis{
+    height: 100px;
+    width: 80px;
+    position: relative;
+    left: 20%;
+}
+
+#fred{
+    height: 100px;
+    width: 70px;
+    position: relative;
+    left: 25%;
+}
+
+.sino{
+    position: absolute;
+    top: 12%;
+    left: 70%;
+    width: 250px;
+    height: 200px;
+    font-size: 25px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+.si{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    width: 60px;
+}
+
+.no{
+    position: absolute;
+    top: 75%;
+    left: 60%;
+    width: 60px;
+}
+
+/* CUANDO PULSAS OBJETOS */
+
+.confirmacionObj{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 120px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+.siObj{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 50px;
+}
+
+.noObj{
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    width: 50px;
+}
+
+#confirmacionBotiquin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 150px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#puntosBotiquin{
+    width: 80px;
+    height: 35px;
+}
+
+#vidaBotiquin{
+    width: 80px;
+    height: 35px;
+}
+
+.amplificadorEstudiante{
+    margin: 15px;
+}
+
+#elegirJugador{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#eleJug{
+    margin: 15px;
+}
+
+#donar{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+/* PUNTOS DE LOS OBJETOS */
+
+.marcaObjeto{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    visibility: hidden;
+}
+
+#o1{
+    left: 21.5%;
+    top: 94%;
+}
+
+#o2{
+    left: 19%;
+    top: 91%;
+}
+
+#o3{
+    left: 16.6%;
+    top: 87.8%;
+}
+
+#o4{
+    left: 16.6%;
+    top: 80.9%;
+}
+
+#o5{
+    left: 18.5%;
+    top: 75.5%;
+}
+
+#o6{
+    left: 20.8%;
+    top: 72%;
+}
+
+#o7{
+    left: 23.2%;
+    top: 69%;
+}
+
+#o8{
+    left: 23.2%;
+    top: 62.2%;
+}
+
+#o9{
+    left: 20.9%;
+    top: 59%;
+}
+
+#o10{
+    left: 18.5%;
+    top: 55.8%;
+}
+
+#o11{
+    left: 18.5%;
+    top: 49.1%;
+}
+
+#o12{
+    left: 18.5%;
+    top: 42.4%;
+}
+
+#o13{
+    left: 20.85%;
+    top: 39.5%;
+}
+
+#o14{
+    left: 20.85%;
+    top: 46%;
+}
+
+#o15{
+    left: 23.2%;
+    top: 49%;
+}
+
+#o16{
+    left: 23.2%;
+    top: 36.5%;
+}
+
+#o17{
+    left: 25.6%;
+    top: 33.6%;
+}
+
+#o18{
+    left: 25.6%;
+    top: 27%;
+}
+
+#o19{
+    left: 25.6%;
+    top: 20.5%;
+}
+
+#o20{
+    left: 23.3%;
+    top: 23.5%;
+}
+
+#o21{
+    left: 20.9%;
+    top: 26.5%;
+}
+
+#o22{
+    left: 25.6%;
+    top: 14%;
+}
+
+#o23{
+    left: 23.2%;
+    top: 11%;
+}
+
+#o24{
+    left: 20.9%;
+    top: 7.5%;
+}
+
+#o25{
+    left: 28%;
+    top: 11%;
+}
+
+#o26{
+    left: 30.5%;
+    top: 14%;
+}
+
+#o27{
+    left: 32.8%;
+    top: 17%;
+}
+
+#o28{
+    left: 35.1%;
+    top: 20.2%;
+}
+
+#o29{
+    left: 35.1%;
+    top: 27%;
+}
+
+#o30{
+    left: 35.1%;
+    top: 34%;
+}
+
+#o31{
+    left: 25.6%;
+    top: 52%;
+}
+
+#o32{
+    left: 27.9%;
+    top: 48.5%;
+}
+
+#o33{
+    left: 30.4%;
+    top: 45.4%;
+}
+
+#o34{
+    left: 37.5%;
+    top: 30.8%;
+}
+
+#o35{
+    left: 39.9%;
+    top: 27.8%;
+}
+
+#o36{
+    left: 42.4%;
+    top: 30.8%;
+}
+
+#o37{
+    left: 44.8%;
+    top: 27.8%;
+}
+
+#o38{
+    left: 47%;
+    top: 24%;
+}
+
+#o39{
+    left: 37.4%;
+    top: 37.8%;
+}
+
+#o40{
+    left: 39.6%;
+    top: 41.5%;
+}
+
+#o41{
+    left: 42.2%;
+    top: 44%;
+}
+
+#o42{
+    left: 44.6%;
+    top: 47%;
+}
+
+#o43{
+    left: 32.9%;
+    top: 48%;
+}
+
+#o44{
+    left: 35.4%;
+    top: 50.9%;
+}
+
+#o45{
+    left: 37.7%;
+    top: 47%;
+}
+
+#o46{
+    left: 47%;
+    top: 50%;
+}
+
+#o47{
+    left: 49.5%;
+    top: 47%;
+}
+
+#o48{
+    left: 51.7%;
+    top: 43.2%;
+}
+
+#o49{
+    left: 54.1%;
+    top: 40.3%;
+}
+
+#o50{
+    left: 56.5%;
+    top: 37.5%;
+}
+
+#o51{
+    left: 56.5%;
+    top: 31%;
+}
+
+#o52{
+    left: 56.5%;
+    top: 24.5%;
+}
+
+#o53{
+    left: 56.5%;
+    top: 18.1%;
+}
+
+#o54{
+    left: 56.5%;
+    top: 11.5%;
+}
+
+#o55{
+    left: 54.2%;
+    top: 8%;
+}
+
+#o56{
+    left: 51.8%;
+    top: 11.5%;
+}
+
+#o57{
+    left: 49.5%;
+    top: 8%;
+}
+
+#o58{
+    left: 47.2%;
+    top: 11.5%;
+}
+
+#o59{
+    left: 44.8%;
+    top: 8%;
+}
+
+#o60{
+    left: 42.4%;
+    top: 11.5%;
+}
+
+#o61{
+    left: 40%;
+    top: 8%;
+}
+
+#o62{
+    left: 58.8%;
+    top: 8%;
+}
+
+#o63{
+    left: 61.1%;
+    top: 11.5%;
+}
+
+#o64{
+    left: 63.3%;
+    top: 8%;
+}
+
+#o65{
+    left: 65.5%;
+    top: 11.5%;
+}
+
+#o66{
+    left: 67.7%;
+    top: 8%;
+}
+
+#o67{
+    left: 70%;
+    top: 11.5%;
+}
+
+#o68{
+    left: 58.8%;
+    top: 34%;
+}
+
+#o69{
+    left: 61.2%;
+    top: 36.8%;
+}
+
+#o70{
+    left: 63.6%;
+    top: 34%;
+}
+
+#o71{
+    left: 54;
+    top: 47%;
+}
+
+#o72{
+    left: 56.2%;
+    top: 51%;
+}
+
+#o73{
+    left: 60.8%;
+    top: 43.5%;
+}
+
+#o74{
+    left: 58.5%;
+    top: 47%;
+}
+
+#o75{
+    left: 56.2%;
+    top: 57.6%;
+}
+
+#o76{
+    left: 58.7%;
+    top: 60.5%;
+}
+
+#o77{
+    left: 70%;
+    top: 64%;
+}
+
+#o78{
+    left: 66.3%;
+    top: 67%;
+}
+
+#o79{
+    left: 65.7%;
+    top: 64%;
+}
+
+#o80{
+    left: 68.2%;
+    top: 66.5%;
+}
+
+#o81{
+    left: 70.5%;
+    top: 63%;
+}
+
+#o82{
+    left: 61.1%;
+    top: 70.6%;
+}
+
+#o83{
+    left: 58.8%;
+    top: 73.5%;
+}
+
+#o84{
+    left: 47%;
+    top: 56.5%;
+}
+
+#o85{
+    left: 47%;
+    top: 63.2%;
+}
+
+#o86{
+    left: 47%;
+    top: 70%;
+}
+
+#o87{
+    left: 49.1%;
+    top: 73%;
+}
+
+#o88{
+    left: 51.5%;
+    top: 76%;
+}
+
+#o89{
+    left: 54%;
+    top: 78.25%;
+}
+
+#o90{
+    left: 56.45%;
+    top: 76%;
+}
+
+#o91{
+    left: 46%;
+    top: 76.5%;
+}
+
+#o92{
+    left: 40.5%;
+    top: 80%;
+}
+
+#o93{
+    left: 39.5%;
+    top: 73%;
+}
+
+#o94{
+    left: 37.4%;
+    top: 69%;
+}
+
+#o95{
+    left: 37.4%;
+    top: 62.4%;
+}
+
+#o96{
+    left: 35.5%;
+    top: 57.5%;
+}
+
+#o97{
+    left: 73.1%;
+    top: 66.5%;
+}
+
+#o98{
+    left: 73.1%;
+    top: 73.2%;
+}
+
+#o99{
+    left: 75.3%;
+    top: 76.9%;
+}
+
+#o100{
+    left: 66.1%;
+    top: 37%;
+}
+
+#o101{
+    left: 68.4%;
+    top: 33.5%;
+}
+
+#o102{
+    left: 70.8%;
+    top: 36.6%;
+}
+
+#o103{
+    left: 73.3%;
+    top: 33.5%;
+}
+
+#o104{
+    left: 75.6%;
+    top: 36.6%;
+}
+
+#o115{
+    left: 43.5%;
+    top: 80%;
+}
+
+#si{
+    width: 45px;
+}
+
+#no{
+    width: 45px;
+}
+
+#pantallaEmy{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#pantallaLix{
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    height: 100px;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#textoLix{
+    margin: 10px;
+}
+
+#aceptarLix{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+}
+
+#pantallaJow{
+    position: absolute;
+    top: 12%;
+    left: 25%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+/* PATNALLA DE CUANDO SE HAN UTILIZADO LOS PERSONAJES */
+
+.uso{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+.usoPersonaje{
+    height: 100px;
+    width: 70px;
+}
+
+#usoMovil{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#usoMedalla{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#usoVitaminas{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#usoPegamento{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#usoAmplificador{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#usoMonedas{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#usoBotiquin{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 250px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+.textoObjetos{
+    position: absolute;
+    top: -50%;
+    left: 10%;
+    width: 250px;
+    height: 140px;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: hidden;
+}
+
+#aceptarObjetosTexto{
+    position: absolute;
+    top: 30%;
+    left: 74%;
+    visibility: hidden;
+}
+
+#pantallaSeleccionarPersonajes{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    font-size: 18px;
+    background-color: rgb(230, 214, 214);
+    border: solid 2px blue;
+    text-align: center;
+    visibility: visible;
+}
+
+.repartirPersonajesEspeciales{
+    text-align: center;
+}

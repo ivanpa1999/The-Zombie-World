@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+        <title>ProfesorDos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/profesorDos.css"/>
+        <script type="module" src="javascript/profesorDos.js"></script>    
+    </head>
+    <body>
+          <script src="javascript/jquery-3.6.1.min.js"></script>
+
+          <a href="gestionarEstudiantes.html" class="button" id="usuarios">Gestión de Usuarios</button>
+          <a href="menuPrincipal.html"><img src="css/imagenes/casa.png" id="casa"/></a>
+          <a><img src="css/imagenes/interrogacion.png" id="interrogacion" class="cursor"/></a>
+          <a id="jugar">Jugar</p>
+          <a class="button" id="reiniciar">Reiniciar</button>
+          <a><img src="css/imagenes/play.png" id="play" class="cursor"/></a>  
+          
+          <div id="modalInterrogacion" class="cuadro">
+               <p id="1">- Pulse en gestión de usuarios para ver y eliminar los usuarios de la partida</p>
+               <p id="3">- Pulse en reiniciar la partida para resetear los datos de la partida.</p>
+               <p id="2">- Pulse en el botón play o jugar para empezar la partida</p>
+               <button id="cerrarInterrogacion">Aceptar</button>
+          </div> 
+
+          <div id="preguntaReinicio" class="cuadro">
+               <p>¿Estás seguro que deseas reiniciar la partida?</p>
+               <button id="si">Sí</button>
+               <button id="no">No</button>
+          </div>
+
+          <div id="confirmacionReincio" class="cuadro">
+               <p>Has reiniciado los datos exitosamente.</p>
+               <button id="aceptar">Aceptar</button>
+          </div>
+
+    </body>
+</html>
